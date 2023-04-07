@@ -57,6 +57,12 @@ Button {
                 target: background_color
                 layer.smooth: false
             }
+
+            PropertyChanges {
+                target: mute_status_text
+                text: "You are currently unmuted"
+
+            }
         },
         State {
             name: "down"
@@ -65,6 +71,12 @@ Button {
             PropertyChanges {
                 target: image
                 source: "images/microphone-slash.svg.svg"
+            }
+
+            PropertyChanges {
+                target: mute_status_text
+                text: "You are currently muted"
+
             }
 
             PropertyChanges {

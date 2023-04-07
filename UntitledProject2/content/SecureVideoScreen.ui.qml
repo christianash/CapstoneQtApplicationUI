@@ -1,15 +1,17 @@
+
+
 /*
 This is a UI file (.ui.qml) that is intended to be edited in Qt Design Studio only.
 It is supposed to be strictly declarative and only uses a subset of QML. If you edit
 this file manually, you might introduce QML code that is not supported by Qt Design Studio.
 Check out https://doc.qt.io/qtcreator/creator-quick-ui-forms.html for details on .ui.qml files.
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import FlowView 1.0
 
 FlowItem {
+    id: flowItem
     width: 1280
     height: 720
     Rectangle {
@@ -46,16 +48,16 @@ FlowItem {
 
             Rectangle {
                 id: user1
-                x: 12
-                y: 38
-                width: 308
-                height: 174
+                x: 218
+                y: 17
+                width: 383
+                height: 216
                 color: "#ffffff"
 
                 Text {
                     id: user1_title
-                    x: 72
-                    y: 151
+                    x: 107
+                    y: 182
                     text: qsTr("First and Last Name 1")
                     font.pixelSize: 17
                 }
@@ -64,8 +66,8 @@ FlowItem {
                     id: user1_image
                     x: 104
                     y: 27
-                    width: 100
-                    height: 100
+                    width: 150
+                    height: 150
                     source: "qrc:/qtquickplugin/images/template_image.png"
                     fillMode: Image.PreserveAspectFit
                 }
@@ -73,16 +75,16 @@ FlowItem {
 
             Rectangle {
                 id: user2
-                x: 327
-                y: 38
-                width: 308
-                height: 174
+                x: 643
+                y: 18
+                width: 383
+                height: 216
                 color: "#ffffff"
 
                 Text {
                     id: user2_title
-                    x: 72
-                    y: 151
+                    x: 105
+                    y: 178
                     text: qsTr("First and Last Name 2")
                     font.pixelSize: 17
                 }
@@ -91,8 +93,8 @@ FlowItem {
                     id: user2_image
                     x: 104
                     y: 27
-                    width: 100
-                    height: 100
+                    width: 150
+                    height: 150
                     source: "qrc:/qtquickplugin/images/template_image.png"
                     fillMode: Image.PreserveAspectFit
                 }
@@ -100,16 +102,16 @@ FlowItem {
 
             Rectangle {
                 id: user3
-                x: 642
-                y: 38
-                width: 308
-                height: 174
+                x: 218
+                y: 239
+                width: 383
+                height: 217
                 color: "#ffffff"
 
                 Text {
                     id: user3_title
-                    x: 72
-                    y: 151
+                    x: 102
+                    y: 179
                     text: qsTr("First and Last Name 3")
                     font.pixelSize: 17
                 }
@@ -118,8 +120,8 @@ FlowItem {
                     id: user3_image
                     x: 104
                     y: 27
-                    width: 100
-                    height: 100
+                    width: 150
+                    height: 150
                     source: "qrc:/qtquickplugin/images/template_image.png"
                     fillMode: Image.PreserveAspectFit
                 }
@@ -127,16 +129,16 @@ FlowItem {
 
             Rectangle {
                 id: user4
-                x: 957
-                y: 38
-                width: 308
-                height: 174
+                x: 643
+                y: 240
+                width: 383
+                height: 216
                 color: "#ffffff"
 
                 Text {
                     id: user4_title
-                    x: 72
-                    y: 151
+                    x: 106
+                    y: 178
                     text: qsTr("First and Last Name 4")
                     font.pixelSize: 17
                 }
@@ -145,8 +147,8 @@ FlowItem {
                     id: user4_image
                     x: 104
                     y: 27
-                    width: 100
-                    height: 100
+                    width: 150
+                    height: 150
                     source: "qrc:/qtquickplugin/images/template_image.png"
                     fillMode: Image.PreserveAspectFit
                 }
@@ -156,7 +158,7 @@ FlowItem {
                 id: toolbar_frame
                 x: -1
                 y: 549
-                width: 1027
+                width: 1282
                 height: 149
                 color: "#ffffff"
 
@@ -319,6 +321,8 @@ FlowItem {
                     display: AbstractButton.IconOnly
                     icon.source: "images/dialpad.svg.svg"
 
+                    onClicked: dial_pad.visible = !dial_pad.visible
+
                     Text {
                         id: dialpad_title
                         x: 0
@@ -357,160 +361,6 @@ FlowItem {
                 }
             }
 
-            Rectangle {
-                id: secure_call_frame
-                x: 1032
-                y: 493
-                width: 246
-                height: 205
-                color: "#ffffff"
-                radius: 0
-
-                Text {
-                    id: initiate_secure_text
-                    x: 75
-                    y: 10
-                    width: 119
-                    height: 22
-                    text: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\nhr { height: 1px; border-width: 0; }\nli.unchecked::marker { content: \"\\2610\"; }\nli.checked::marker { content: \"\\2612\"; }\n</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt; font-weight:700;\">Initiate Secure Call</span></p></body></html>"
-                    font.pixelSize: 20
-                    textFormat: Text.RichText
-                    font.styleName: "Bold"
-                    font.family: "Verdana"
-                }
-
-                Image {
-                    id: secure_call_lock_icon
-                    x: 15
-                    y: 8
-                    width: 25
-                    height: 25
-                    source: "images/lock.svg.png"
-                    fillMode: Image.PreserveAspectFit
-                }
-
-                Button {
-                    id: secure_audio_button
-                    x: 14
-                    y: 41
-                    width: 215
-                    height: 75
-                    visible: true
-                    text: "    Audio Call"
-                    icon.color: "#000000"
-                    icon.height: 50
-                    highlighted: false
-                    icon.width: 50
-                    icon.cache: true
-                    font.pointSize: 15
-                    flat: false
-                    wheelEnabled: true
-                    display: AbstractButton.TextBesideIcon
-                    icon.source: "images/volume-up.svg.png"
-                }
-
-                Button {
-                    id: secure_video_button
-                    x: 15
-                    y: 122
-                    width: 215
-                    height: 75
-                    visible: true
-                    text: "    Video Call"
-                    icon.color: "#000000"
-                    icon.height: 50
-                    highlighted: false
-                    icon.width: 50
-                    icon.cache: true
-                    font.pointSize: 15
-                    flat: false
-                    wheelEnabled: true
-                    display: AbstractButton.TextBesideIcon
-                    icon.source: "images/camera.svg.png"
-                }
-            }
-
-            Rectangle {
-                id: user5
-                x: 12
-                y: 221
-                width: 412
-                height: 235
-                color: "#ffffff"
-
-                Text {
-                    id: user5_title
-                    x: 124
-                    y: 204
-                    text: qsTr("First and Last Name 5")
-                    font.pixelSize: 17
-                }
-
-                Image {
-                    id: user5_image
-                    x: 139
-                    y: 36
-                    width: 134
-                    height: 134
-                    source: "qrc:/qtquickplugin/images/template_image.png"
-                    fillMode: Image.PreserveAspectFit
-                }
-            }
-
-            Rectangle {
-                id: user6
-                x: 433
-                y: 221
-                width: 412
-                height: 235
-                color: "#ffffff"
-
-                Text {
-                    id: user6_title
-                    x: 124
-                    y: 204
-                    text: qsTr("First and Last Name 6")
-                    font.pixelSize: 17
-                }
-
-                Image {
-                    id: user6_image
-                    x: 139
-                    y: 36
-                    width: 134
-                    height: 134
-                    source: "qrc:/qtquickplugin/images/template_image.png"
-                    fillMode: Image.PreserveAspectFit
-                }
-            }
-
-            Rectangle {
-                id: user7
-                x: 855
-                y: 221
-                width: 412
-                height: 235
-                color: "#ffffff"
-
-                Text {
-                    id: user7_title
-                    x: 124
-                    y: 204
-                    text: qsTr("First and Last Name 7")
-                    font.pixelSize: 17
-                }
-
-                Image {
-                    id: user7_image
-                    x: 139
-                    y: 36
-                    width: 134
-                    height: 134
-                    source: "qrc:/qtquickplugin/images/template_image.png"
-                    fillMode: Image.PreserveAspectFit
-                }
-            }
-
             Text {
                 id: mute_status_text
                 x: 562
@@ -520,7 +370,163 @@ FlowItem {
             }
         }
 
+        Rectangle {
+            id: dial_pad
+            x: 583
+            y: 44
+            width: 366
+            height: 525
+            visible: false
+            color: "#ffffff"
+            Button {
+                x: 15
+                y: 113
+                width: 101
+                height: 45
+                text: qsTr("1")
+                onClicked: dial_textid.text += text
+            }
 
+            Button {
+                x: 133
+                y: 113
+                width: 101
+                height: 45
+                text: qsTr("2")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 256
+                y: 113
+                width: 101
+                height: 45
+                text: qsTr("3")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 15
+                y: 178
+                width: 101
+                height: 45
+                text: qsTr("4")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 133
+                y: 178
+                width: 101
+                height: 45
+                text: qsTr("5")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 256
+                y: 178
+                width: 101
+                height: 45
+                text: qsTr("6")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 16
+                y: 248
+                width: 100
+                height: 44
+                text: qsTr("7")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 133
+                y: 248
+                width: 101
+                height: 45
+                text: qsTr("8")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 256
+                y: 248
+                width: 101
+                height: 45
+                text: qsTr("9")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 133
+                y: 311
+                width: 101
+                height: 45
+                text: qsTr("0")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 256
+                y: 311
+                width: 101
+                height: 45
+                text: qsTr("#")
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 16
+                y: 311
+                width: 101
+                height: 45
+                text: qsTr("*")
+                onClicked: dial_textid.text += text
+            }
+
+            Rectangle {
+                x: 15
+                y: 27
+                width: 342
+                height: 71
+                color: "#ffffff"
+                border.width: 1
+                TextEdit {
+                    id: dial_textid
+                    x: 16
+                    y: 8
+                    width: 318
+                    height: 55
+                    text: qsTr("")
+                    font.pixelSize: 12
+                }
+            }
+
+            Custom_Call_Button {
+                x: 134
+                y: 384
+                width: 100
+                height: 100
+                Text {
+                    x: 13
+                    y: 112
+                    text: qsTr("Place Call")
+                    font.pixelSize: 16
+                    font.bold: true
+                }
+            }
+
+            Button {
+                id: clear_btn
+                x: 284
+                y: 43
+                width: 66
+                height: 40
+                text: qsTr("Clear")
+                onClicked: dial_textid.text = ""
+            }
+        }
     }
 }
-
