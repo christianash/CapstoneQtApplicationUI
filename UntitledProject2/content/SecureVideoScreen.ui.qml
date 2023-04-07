@@ -16,6 +16,8 @@ FlowItem {
     height: 720
     Rectangle {
         id: background_space
+        x: 0
+        y: 0
         width: 1280
         height: 720
         visible: true
@@ -251,6 +253,8 @@ FlowItem {
                     wheelEnabled: true
                     display: AbstractButton.IconOnly
                     icon.source: "images/1077114.png"
+                    onClicked: participants_list_scrollview.visible
+                               = !participants_list_scrollview.visible
 
                     Text {
                         id: participant_title
@@ -363,8 +367,8 @@ FlowItem {
 
             Text {
                 id: mute_status_text
-                x: 562
-                y: 0
+                x: 561
+                y: -5
                 text: qsTr("You are currently unmuted")
                 font.pixelSize: 12
             }
@@ -510,6 +514,7 @@ FlowItem {
                 width: 100
                 height: 100
                 Text {
+                    id: placecall_textid
                     x: 13
                     y: 112
                     text: qsTr("Place Call")
@@ -526,6 +531,72 @@ FlowItem {
                 height: 40
                 text: qsTr("Clear")
                 onClicked: dial_textid.text = ""
+            }
+        }
+
+        Custom_Camera_Button {
+            id: custom_Camera_Button
+            x: 305
+            y: 584
+
+            Text {
+                id: camera_textid
+                x: -10
+                y: 102
+                text: qsTr("Toggle Camera")
+                font.pixelSize: 18
+                font.styleName: "Bold"
+                font.family: "Verdana"
+            }
+        }
+
+        ScrollView {
+            id: participants_list_scrollview
+            x: 433
+            y: 369
+            width: 200
+            height: 200
+            visible: false
+
+            Rectangle {
+                id: rectangle
+                x: 0
+                y: 0
+                width: 200
+                height: 200
+                color: "#ffffff"
+
+                Text {
+                    id: participant1_id
+                    x: 0
+                    y: 0
+                    text: user1_title.text
+                    font.pixelSize: 20
+                }
+
+                Text {
+                    id: participant2_id
+                    x: 0
+                    y: 48
+                    text: user2_title.text
+                    font.pixelSize: 20
+                }
+
+                Text {
+                    id: participant3_id
+                    x: 0
+                    y: 100
+                    text: user3_title.text
+                    font.pixelSize: 20
+                }
+
+                Text {
+                    id: participant4_id
+                    x: 2
+                    y: 157
+                    text: user4_title.text
+                    font.pixelSize: 20
+                }
             }
         }
     }
