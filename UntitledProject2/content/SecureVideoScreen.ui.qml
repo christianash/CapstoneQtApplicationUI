@@ -182,6 +182,11 @@ FlowItem {
                     display: AbstractButton.IconOnly
                     icon.source: "images/volume-down.svg.png"
 
+                    onClicked: volume_frame_pointer.visible = !volume_frame_pointer.visible
+                               & (volume_frame.visible = !volume_frame.visible)
+                               & (volume_slider.visible = !volume_slider.visible)
+                               & (volume_slider_text.visible = !volume_slider_text.visible)
+
                     Rectangle {
                         id: volume_frame_pointer
                         x: 36
@@ -190,6 +195,7 @@ FlowItem {
                         height: 28
                         color: "#2e2e2e"
                         rotation: 45
+                        visible: false
                     }
 
                     Text {
@@ -214,6 +220,7 @@ FlowItem {
                         width: 412
                         height: 76
                         color: "#2e2e2e"
+                        visible: false
                     }
 
                     Custon_volume_slider {
@@ -222,6 +229,7 @@ FlowItem {
                         y: -56
                         width: 399
                         height: 33
+                        visible: false
                     }
 
                     Text {
@@ -232,6 +240,7 @@ FlowItem {
                         text: qsTr("Call Volume:")
                         font.pixelSize: 15
                         font.bold: true
+                        visible: false
                     }
                 }
 
