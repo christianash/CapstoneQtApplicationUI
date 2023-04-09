@@ -1,17 +1,20 @@
+
+
 /*
 This is a UI file (.ui.qml) that is intended to be edited in Qt Design Studio only.
 It is supposed to be strictly declarative and only uses a subset of QML. If you edit
 this file manually, you might introduce QML code that is not supported by Qt Design Studio.
 Check out https://doc.qt.io/qtcreator/creator-quick-ui-forms.html for details on .ui.qml files.
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import FlowView 1.0
 
 FlowItem {
+    id: flowItem
     width: 1280
     height: 720
+    state: "State1"
 
     Rectangle {
         id: background
@@ -20,16 +23,6 @@ FlowItem {
         width: 1280
         height: 725
         color: "#a3a0a0"
-
-        Image {
-            id: top_user_icon
-            x: 1215
-            y: 8
-            width: 57
-            height: 57
-            source: "images/avatar-1.svg.svg"
-            fillMode: Image.PreserveAspectFit
-        }
 
         Button {
             id: user_settings_button
@@ -67,7 +60,6 @@ FlowItem {
             display: AbstractButton.IconOnly
         }
 
-
         Button {
             id: logout_button
             x: 18
@@ -95,6 +87,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("1")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -104,6 +97,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("2")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -113,6 +107,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("3")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -122,6 +117,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("4")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -131,6 +127,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("5")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -140,6 +137,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("6")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -149,6 +147,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("7")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -158,6 +157,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("8")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -167,6 +167,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("9")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -176,6 +177,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("0")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -185,6 +187,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("#")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Button {
@@ -194,6 +197,7 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("*")
+                onClicked: dynamic_entry_text.text += text
             }
 
             Rectangle {
@@ -211,7 +215,7 @@ FlowItem {
                     y: 8
                     width: 485
                     height: 55
-                    text: qsTr("...")
+                    text: qsTr("")
                     font.pixelSize: 12
                 }
             }
@@ -231,6 +235,24 @@ FlowItem {
                 }
             }
         }
-    }
 
+        Button {
+            id: loginbutton
+            x: 1223
+            y: 0
+            width: 57
+            height: 57
+            text: qsTr("")
+
+            Image {
+                id: top_user_icon
+                x: 0
+                y: 0
+                width: 57
+                height: 57
+                source: "images/avatar-1.svg.svg"
+                fillMode: Image.PreserveAspectFit
+            }
+        }
+    }
 }
