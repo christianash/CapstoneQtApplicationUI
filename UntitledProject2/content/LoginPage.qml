@@ -5,8 +5,6 @@ import QtQuick.Controls 2.15
 Item {
     width: 1920
     height: 1080
-    id:loginpageid
-    visible: false
 
 
     Rectangle {
@@ -16,6 +14,8 @@ Item {
         width: 1920
         height: 1080
         color: "#ffffff"
+
+
 
         Rectangle {
             id: rectangle1

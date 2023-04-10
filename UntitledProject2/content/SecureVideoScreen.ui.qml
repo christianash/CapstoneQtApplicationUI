@@ -9,6 +9,8 @@ Check out https://doc.qt.io/qtcreator/creator-quick-ui-forms.html for details on
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import FlowView 1.0
+import QtQuick3D 6.4
+import QtMultimedia 6.3
 
 FlowItem {
     id: flowItem
@@ -608,5 +610,15 @@ FlowItem {
                 }
             }
         }
+
+        Text {
+            id: callstatus_id
+            text: qsTr("Currently in secure call")
+            font.pixelSize: 20
+        }
+    }
+
+    Item {
+        id: __materialLibrary__
     }
 }
