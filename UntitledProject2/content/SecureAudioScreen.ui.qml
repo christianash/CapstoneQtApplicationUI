@@ -10,6 +10,7 @@ import QtQuick.Controls 2.15
 import FlowView 1.0
 
 FlowItem {
+    id: flowItem
     width: 1280
     height: 720
     Rectangle {
@@ -152,283 +153,6 @@ FlowItem {
                 }
             }
 
-            Rectangle {
-                id: toolbar_frame
-                x: -1
-                y: 549
-                width: 1027
-                height: 149
-                color: "#ffffff"
-
-                Button {
-                    id: volume_button
-                    x: 174
-                    y: 12
-                    width: 100
-                    height: 100
-                    visible: true
-                    checkable: true
-                    icon.color: "#000000"
-                    flat: false
-                    wheelEnabled: true
-                    icon.cache: true
-                    icon.width: 70
-                    font.pointSize: 17
-                    icon.height: 70
-                    display: AbstractButton.IconOnly
-                    icon.source: "images/volume-down.svg.png"
-
-                    Rectangle {
-                        id: volume_frame_pointer
-                        x: 36
-                        y: -32
-                        width: 28
-                        height: 28
-                        color: "#2e2e2e"
-                        rotation: 45
-                    }
-
-                    Text {
-                        id: volume_title
-                        x: 0
-                        y: 104
-                        width: 100
-                        height: 24
-                        text: "Volume"
-                        font.letterSpacing: 0.5
-                        font.pixelSize: 18
-                        horizontalAlignment: Text.AlignHCenter
-                        font.family: "Verdana"
-                        font.styleName: "Bold"
-                        font.wordSpacing: 1
-                    }
-
-                    Rectangle {
-                        id: volume_frame
-                        x: -160
-                        y: -94
-                        width: 412
-                        height: 76
-                        color: "#2e2e2e"
-                    }
-
-                    Custon_volume_slider {
-                        id: volume_slider
-                        x: -153
-                        y: -56
-                        width: 399
-                        height: 33
-                    }
-
-                    Text {
-                        id: volume_slider_text
-                        x: -153
-                        y: -88
-                        color: "#ffffff"
-                        text: qsTr("Call Volume:")
-                        font.pixelSize: 15
-                        font.bold: true
-                    }
-                }
-
-                Button {
-                    id: participant_list_button
-                    x: 470
-                    y: 12
-                    width: 100
-                    height: 100
-                    visible: true
-                    checkable: true
-                    icon.color: "#000000"
-                    icon.height: 70
-                    highlighted: false
-                    icon.width: 70
-                    icon.cache: true
-                    font.pointSize: 17
-                    flat: false
-                    wheelEnabled: true
-                    display: AbstractButton.IconOnly
-                    icon.source: "images/1077114.png"
-
-                    Text {
-                        id: participant_title
-                        x: -9
-                        y: 104
-                        width: 118
-                        height: 26
-                        text: "Participants"
-                        font.letterSpacing: 0.5
-                        font.pixelSize: 18
-                        horizontalAlignment: Text.AlignHCenter
-                        font.family: "Verdana"
-                        font.styleName: "Bold"
-                        font.wordSpacing: 1
-                    }
-                }
-
-                Button {
-                    id: end_call_button
-                    x: 590
-                    y: 12
-                    width: 100
-                    height: 100
-                    visible: true
-                    icon.color: "#000000"
-                    icon.height: 70
-                    highlighted: false
-                    icon.width: 70
-                    icon.cache: true
-                    font.pointSize: 17
-                    flat: false
-                    wheelEnabled: true
-                    display: AbstractButton.IconOnly
-                    icon.source: "images/phone.svg.png"
-
-                    Text {
-                        id: end_call_title
-                        x: 0
-                        y: 103
-                        width: 100
-                        height: 26
-                        text: "End Call"
-                        font.letterSpacing: 0.5
-                        font.pixelSize: 18
-                        horizontalAlignment: Text.AlignHCenter
-                        font.family: "Verdana"
-                        font.styleName: "Bold"
-                        font.wordSpacing: 1
-                    }
-                }
-
-                Button {
-                    id: dialpad_button
-                    x: 710
-                    y: 12
-                    width: 100
-                    height: 100
-                    visible: true
-                    checkable: true
-                    icon.color: "#000000"
-                    icon.height: 70
-                    highlighted: false
-                    icon.width: 70
-                    icon.cache: true
-                    font.pointSize: 17
-                    flat: false
-                    wheelEnabled: true
-                    display: AbstractButton.IconOnly
-                    icon.source: "images/dialpad.svg.svg"
-
-                    Text {
-                        id: dialpad_title
-                        x: 0
-                        y: 103
-                        width: 100
-                        height: 26
-                        text: "Dial Pad"
-                        font.letterSpacing: 0.5
-                        font.pixelSize: 18
-                        horizontalAlignment: Text.AlignHCenter
-                        font.family: "Verdana"
-                        font.styleName: "Bold"
-                        font.wordSpacing: 1
-                    }
-                }
-
-                Custom_Mute_Button {
-                    id: custom_Mute_Button
-                    x: 50
-                    y: 12
-
-                    Text {
-                        id: mute_title
-                        x: -16
-                        y: 98
-                        width: 116
-                        height: 24
-                        text: "Toggle Mute"
-                        font.letterSpacing: 0.5
-                        font.pixelSize: 18
-                        horizontalAlignment: Text.AlignHCenter
-                        font.family: "Verdana"
-                        font.styleName: "Bold"
-                        font.wordSpacing: 1
-                    }
-                }
-            }
-
-            Rectangle {
-                id: secure_call_frame
-                x: 1032
-                y: 493
-                width: 246
-                height: 205
-                color: "#ffffff"
-                radius: 0
-
-                Text {
-                    id: initiate_secure_text
-                    x: 75
-                    y: 10
-                    width: 119
-                    height: 22
-                    text: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\nhr { height: 1px; border-width: 0; }\nli.unchecked::marker { content: \"\\2610\"; }\nli.checked::marker { content: \"\\2612\"; }\n</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt; font-weight:700;\">Initiate Secure Call</span></p></body></html>"
-                    font.pixelSize: 20
-                    textFormat: Text.RichText
-                    font.styleName: "Bold"
-                    font.family: "Verdana"
-                }
-
-                Image {
-                    id: secure_call_lock_icon
-                    x: 15
-                    y: 8
-                    width: 25
-                    height: 25
-                    source: "images/lock.svg.png"
-                    fillMode: Image.PreserveAspectFit
-                }
-
-                Button {
-                    id: secure_audio_button
-                    x: 14
-                    y: 41
-                    width: 215
-                    height: 75
-                    visible: true
-                    text: "    Audio Call"
-                    icon.color: "#000000"
-                    icon.height: 50
-                    highlighted: false
-                    icon.width: 50
-                    icon.cache: true
-                    font.pointSize: 15
-                    flat: false
-                    wheelEnabled: true
-                    display: AbstractButton.TextBesideIcon
-                    icon.source: "images/volume-up.svg.png"
-                }
-
-                Button {
-                    id: secure_video_button
-                    x: 15
-                    y: 122
-                    width: 215
-                    height: 75
-                    visible: true
-                    text: "    Video Call"
-                    icon.color: "#000000"
-                    icon.height: 50
-                    highlighted: false
-                    icon.width: 50
-                    icon.cache: true
-                    font.pointSize: 15
-                    flat: false
-                    wheelEnabled: true
-                    display: AbstractButton.TextBesideIcon
-                    icon.source: "images/camera.svg.png"
-                }
-            }
 
             Rectangle {
                 id: user5
@@ -518,9 +242,500 @@ FlowItem {
                 text: qsTr("You are currently unmuted")
                 font.pixelSize: 12
             }
+            Rectangle {
+                id: toolbar_frame
+                x: -1
+                y: 549
+                width: 1278
+                height: 149
+                color: "#ffffff"
+
+                Button {
+                    id: volume_button
+                    x: 174
+                    y: 12
+                    width: 100
+                    height: 100
+                    visible: true
+                    checkable: true
+                    icon.color: "#000000"
+                    flat: false
+                    wheelEnabled: true
+                    icon.cache: true
+                    icon.width: 70
+                    font.pointSize: 17
+                    icon.height: 70
+                    display: AbstractButton.IconOnly
+                    icon.source: "images/volume-down.svg.png"
+
+                    Rectangle {
+                        id: volume_frame_pointer
+                        x: 36
+                        y: -32
+                        width: 28
+                        height: 28
+                        visible: false
+                        color: "#2e2e2e"
+                        rotation: 45
+                    }
+
+                    Text {
+                        id: volume_title
+                        x: 0
+                        y: 104
+                        width: 100
+                        height: 24
+                        text: "Volume"
+                        font.letterSpacing: 0.5
+                        font.pixelSize: 18
+                        horizontalAlignment: Text.AlignHCenter
+                        font.family: "Verdana"
+                        font.styleName: "Bold"
+                        font.wordSpacing: 1
+                    }
+
+                    Rectangle {
+                        id: volume_frame
+                        x: -160
+                        y: -94
+                        width: 412
+                        height: 76
+                        visible: false
+                        color: "#2e2e2e"
+                    }
+
+                    Custon_volume_slider {
+                        id: volume_slider
+                        x: -153
+                        y: -56
+                        width: 399
+                        height: 33
+                        visible: false
+                    }
+
+                    Text {
+                        id: volume_slider_text
+                        x: -153
+                        y: -88
+                        visible: false
+                        color: "#ffffff"
+                        text: qsTr("Call Volume:")
+                        font.pixelSize: 15
+                        font.bold: true
+                    }
+                }
+
+                Button {
+                    id: participant_list_button
+                    x: 470
+                    y: 12
+                    width: 100
+                    height: 100
+                    visible: true
+                    checkable: true
+                    icon.color: "#000000"
+                    icon.height: 70
+                    highlighted: false
+                    icon.width: 70
+                    icon.cache: true
+                    font.pointSize: 17
+                    flat: false
+                    wheelEnabled: true
+                    display: AbstractButton.IconOnly
+                    icon.source: "images/1077114.png"
+
+                    Text {
+                        id: participant_title
+                        x: -9
+                        y: 104
+                        width: 118
+                        height: 26
+                        text: "Participants"
+                        font.letterSpacing: 0.5
+                        font.pixelSize: 18
+                        horizontalAlignment: Text.AlignHCenter
+                        font.family: "Verdana"
+                        font.styleName: "Bold"
+                        font.wordSpacing: 1
+                    }
+
+                    Rectangle {
+                        id: participant_frame_pointer
+                        x: 36
+                        y: -32
+                        width: 28
+                        height: 28
+                        visible: false
+                        color: "#2e2e2e"
+                        rotation: 45
+                    }
+
+
+
+                    Rectangle {
+                        id: participant_frame
+                        x: -160
+                        y: -94
+                        width: 412
+                        height: 76
+                        visible: false
+                        color: "#2e2e2e"
+                    }
+                    Text {
+                        id: participant_list_title
+                        x: -153
+                        y: -88
+                        visible: false
+                        color: "#ffffff"
+                        text: qsTr("Call Volume:")
+                        font.pixelSize: 15
+                        font.bold: true
+                    }
+                    Text {
+                        id: participant_list_names
+                        visible: false
+                        text: qsTr("Text")
+                        font.pixelSize: 12
+                    }
+                }
+
+                Button {
+                    id: end_call_button
+                    x: 590
+                    y: 12
+                    width: 100
+                    height: 100
+                    visible: true
+                    icon.color: "#000000"
+                    icon.height: 70
+                    highlighted: false
+                    icon.width: 70
+                    icon.cache: true
+                    font.pointSize: 17
+                    flat: false
+                    wheelEnabled: true
+                    display: AbstractButton.IconOnly
+                    icon.source: "images/phone.svg.png"
+
+                    Text {
+                        id: end_call_title
+                        x: 0
+                        y: 103
+                        width: 100
+                        height: 26
+                        text: "End Call"
+                        font.letterSpacing: 0.5
+                        font.pixelSize: 18
+                        horizontalAlignment: Text.AlignHCenter
+                        font.family: "Verdana"
+                        font.styleName: "Bold"
+                        font.wordSpacing: 1
+                    }
+                }
+
+                Button {
+                    id: dialpad_button
+                    x: 710
+                    y: 12
+                    width: 100
+                    height: 100
+                    visible: true
+                    checkable: true
+                    icon.color: "#000000"
+                    icon.height: 70
+                    highlighted: false
+                    icon.width: 70
+                    icon.cache: true
+                    font.pointSize: 17
+                    flat: false
+                    wheelEnabled: true
+                    display: AbstractButton.IconOnly
+                    icon.source: "images/dialpad.svg.svg"
+
+                    Text {
+                        id: dialpad_title
+                        x: 0
+                        y: 103
+                        width: 100
+                        height: 26
+                        text: "Dial Pad"
+                        font.letterSpacing: 0.5
+                        font.pixelSize: 18
+                        horizontalAlignment: Text.AlignHCenter
+                        font.family: "Verdana"
+                        font.styleName: "Bold"
+                        font.wordSpacing: 1
+                    }
+
+                    Rectangle {
+                        id: dialpad_pointer
+                        x: 30
+                        y: -38
+                        width: 28
+                        height: 28
+                        visible: false
+                        color: "#2e2e2e"
+                        rotation: 45
+                    }
+
+                    Rectangle {
+                        id: dialpad_frame
+                        x: -166
+                        y: -100
+                        width: 412
+                        height: 76
+                        visible: false
+                        color: "#2e2e2e"
+                    }
+
+                    Text {
+                        id: dialpad_text
+                        x: -159
+                        y: -94
+                        visible: false
+                        color: "#ffffff"
+                        text: qsTr("Call Volume:")
+                        font.pixelSize: 15
+                        font.bold: true
+                    }
+                }
+
+                Custom_Mute_Button {
+                    id: custom_Mute_Button
+                    x: 50
+                    y: 12
+
+                    Text {
+                        id: mute_title
+                        x: -16
+                        y: 98
+                        width: 116
+                        height: 24
+                        text: "Toggle Mute"
+                        font.letterSpacing: 0.5
+                        font.pixelSize: 18
+                        horizontalAlignment: Text.AlignHCenter
+                        font.family: "Verdana"
+                        font.styleName: "Bold"
+                        font.wordSpacing: 1
+                    }
+                }
+            }
+
+            Image {
+                id: call_type_icon
+                x: 12
+                y: -12
+                width: 44
+                height: 44
+                source: "images/lock.svg.png"
+                fillMode: Image.PreserveAspectFit
+
+                Text {
+                    id: call_type_text
+                    x: 58
+                    y: 16
+                    text: qsTr("Secure Call in progress...")
+                    font.pixelSize: 15
+                }
+            }
         }
 
 
     }
+    states: [
+        State {
+            name: "VolumeCheckedState"
+            when: volume_button.checked
+
+            PropertyChanges {
+                target: volume_frame_pointer
+                visible: true
+            }
+
+            PropertyChanges {
+                target: volume_frame
+                visible: true
+            }
+
+            PropertyChanges {
+                target: volume_slider
+                visible: true
+            }
+
+            PropertyChanges {
+                target: volume_slider_text
+                visible: true
+            }
+            PropertyChanges {
+                target: participant_list_button
+                opacity: 0.5
+                checkable: false
+                checked: false
+            }
+
+            PropertyChanges {
+                target: dialpad_button
+                opacity: 0.5
+                checkable: false
+                checked: false
+            }
+
+            PropertyChanges {
+                target: end_call_button
+                opacity: 0.5
+            }
+
+            PropertyChanges {
+                target: custom_Mute_Button
+                opacity: 0.5
+            }
+        },
+        State {
+            name: "ParticipantCheckedState"
+            when: participant_list_button.checked
+
+            PropertyChanges {
+                target: participant_list_names
+                x: -40
+                y: -196
+                width: 176
+                height: 170
+                color: "#ffffff"
+                font.pixelSize: 17
+                verticalAlignment: Text.AlignBottom
+                wrapMode: Text.NoWrap
+                font.weight: Font.Medium
+            }
+
+            PropertyChanges {
+                target: participant_frame_pointer
+                visible: true
+            }
+
+            PropertyChanges {
+                target: participant_frame
+                x: -50
+                y: -240
+                width: 197
+                height: 222
+                visible: true
+            }
+
+            PropertyChanges {
+                target: participant_list_title
+                x: -40
+                y: -229
+                visible: true
+                text: qsTr("Participants:")
+            }
+
+            PropertyChanges {
+                target: background_space
+                x: 0
+                y: 0
+            }
+
+            PropertyChanges {
+                target: volume_button
+                opacity: 0.5
+                checkable: false
+                checked: false
+            }
+
+            PropertyChanges {
+                target: dialpad_button
+                opacity: 0.5
+                checkable: false
+                checked: false
+            }
+
+            PropertyChanges {
+                target: end_call_button
+                opacity: 0.5
+                checkable: false
+            }
+
+            PropertyChanges {
+                target: custom_Mute_Button
+                opacity: 0.5
+                checkable: true
+            }
+
+            PropertyChanges {
+                target: dialpad_pointer
+                x: 278
+                y: -32
+            }
+
+            PropertyChanges {
+                target: dialpad_frame
+                x: 82
+                y: -94
+            }
+
+            PropertyChanges {
+                target: dialpad_text
+                x: 89
+                y: -88
+            }
+        },
+        State {
+            name: "DialCheckedState"
+            when: dialpad_button.checked
+
+            PropertyChanges {
+                target: volume_button
+                opacity: 0.5
+                flat: false
+                checkable: false
+                checked: false
+            }
+
+            PropertyChanges {
+                target: participant_list_button
+                opacity: 0.5
+                flat: false
+                checkable: false
+                checked: false
+            }
+
+            PropertyChanges {
+                target: end_call_button
+                opacity: 0.5
+                flat: false
+                checkable: false
+            }
+
+            PropertyChanges {
+                target: custom_Mute_Button
+                opacity: 0.5
+                flat: false
+                checkable: true
+            }
+
+            PropertyChanges {
+                target: dialpad_pointer
+                visible: true
+            }
+
+            PropertyChanges {
+                target: dialpad_frame
+                x: -127
+                y: -523
+                width: 343
+                height: 499
+                visible: true
+            }
+
+            PropertyChanges {
+                target: dialpad_text
+                x: -120
+                y: -513
+                visible: true
+                text: qsTr("Dial Pad:")
+            }
+        }
+    ]
 }
 

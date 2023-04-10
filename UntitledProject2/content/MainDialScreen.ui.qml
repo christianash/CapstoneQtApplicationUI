@@ -29,55 +29,115 @@ FlowItem {
             height: 57
             source: "images/avatar-1.svg.svg"
             fillMode: Image.PreserveAspectFit
+
+            Text {
+                id: top_username_text
+                x: 3
+                y: 58
+                text: qsTr("username")
+                font.pixelSize: 12
+            }
         }
 
         Button {
             id: user_settings_button
-            x: 133
-            y: 25
+            x: 162
+            y: 554
             height: 100
             text: qsTr("Button")
             icon.source: "images/user-settings.svg.svg"
             icon.height: 70
             icon.width: 70
             display: AbstractButton.IconOnly
+
+            Text {
+                id: settings_text
+                x: 6
+                y: 101
+                width: 88
+                height: 38
+                text: qsTr("Settings")
+                font.pixelSize: 18
+                horizontalAlignment: Text.AlignHCenter
+                font.weight: Font.Medium
+                font.family: "Verdana"
+            }
         }
 
         Button {
             id: contacts_button
-            x: 246
-            y: 25
+            x: 275
+            y: 554
             height: 100
             text: qsTr("Button")
             icon.source: "images/book.svg.svg"
             icon.height: 70
             icon.width: 70
             display: AbstractButton.IconOnly
+
+            Text {
+                id: contacts_text
+                x: 8
+                y: 101
+                width: 88
+                height: 38
+                text: qsTr("Contacts")
+                font.pixelSize: 18
+                horizontalAlignment: Text.AlignHCenter
+                font.weight: Font.Medium
+                font.family: "Verdana"
+            }
         }
 
         Button {
-            id: previous_calls_button
-            x: 359
-            y: 25
+            id: call_history_button
+            x: 388
+            y: 554
             height: 100
             text: qsTr("Button")
             icon.source: "images/history.svg.svg"
             icon.height: 70
             icon.width: 70
             display: AbstractButton.IconOnly
+
+            Text {
+                id: call_history_text
+                x: -5
+                y: 101
+                width: 109
+                height: 38
+                text: qsTr("Call History")
+                font.pixelSize: 18
+                horizontalAlignment: Text.AlignHCenter
+                font.weight: Font.Medium
+                font.family: "Verdana"
+            }
         }
 
 
         Button {
             id: logout_button
-            x: 18
-            y: 25
+            x: 47
+            y: 554
             height: 100
             text: qsTr("Button")
             icon.source: "images/user-undo.svg.svg"
             icon.height: 70
             icon.width: 70
             display: AbstractButton.IconOnly
+
+            Text {
+                id: logout_text
+                x: 6
+                y: 100
+                width: 88
+                height: 38
+                text: qsTr("Logout")
+                font.pixelSize: 18
+                horizontalAlignment: Text.AlignHCenter
+                font.weight: Font.Medium
+                font.family: "Verdana"
+            }
         }
 
         Rectangle {
@@ -230,6 +290,28 @@ FlowItem {
                     font.bold: true
                 }
             }
+        }
+
+        Image {
+            id: filler_image
+            x: 47
+            y: 91
+            width: 441
+            height: 398
+            source: "qrc:/qtquickplugin/images/template_image.png"
+            fillMode: Image.PreserveAspectFit
+        }
+
+        Text {
+            id: page_title_text
+            x: 92
+            y: 38
+            width: 351
+            height: 40
+            text: qsTr("Monday 10th April 2023")
+            font.pixelSize: 28
+            font.family: "Verdana"
+            font.styleName: "Bold"
         }
     }
 
