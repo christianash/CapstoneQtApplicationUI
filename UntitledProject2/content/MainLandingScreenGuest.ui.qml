@@ -32,9 +32,9 @@ FlowItem {
 
             Text {
                 id: top_username_text
-                x: 3
-                y: 58
-                text: qsTr("username")
+                x: 13
+                y: 59
+                text: qsTr("Guest")
                 font.pixelSize: 12
             }
         }
@@ -64,56 +64,6 @@ FlowItem {
             }
         }
 
-        Button {
-            id: contacts_button
-            x: 275
-            y: 554
-            height: 100
-            text: qsTr("Button")
-            icon.source: "images/book.svg.svg"
-            icon.height: 70
-            icon.width: 70
-            display: AbstractButton.IconOnly
-
-            Text {
-                id: contacts_text
-                x: 8
-                y: 101
-                width: 88
-                height: 38
-                text: qsTr("Contacts")
-                font.pixelSize: 18
-                horizontalAlignment: Text.AlignHCenter
-                font.weight: Font.Medium
-                font.family: "Verdana"
-            }
-        }
-
-        Button {
-            id: call_history_button
-            x: 388
-            y: 554
-            height: 100
-            text: qsTr("Button")
-            icon.source: "images/history.svg.svg"
-            icon.height: 70
-            icon.width: 70
-            display: AbstractButton.IconOnly
-
-            Text {
-                id: call_history_text
-                x: -5
-                y: 101
-                width: 109
-                height: 38
-                text: qsTr("Call History")
-                font.pixelSize: 18
-                horizontalAlignment: Text.AlignHCenter
-                font.weight: Font.Medium
-                font.family: "Verdana"
-            }
-        }
-
 
         Button {
             id: logout_button
@@ -121,7 +71,7 @@ FlowItem {
             y: 554
             height: 100
             text: qsTr("Button")
-            icon.source: "images/user-undo.svg.svg"
+            icon.source: "images/avatar-1.svg.svg"
             icon.height: 70
             icon.width: 70
             display: AbstractButton.IconOnly
@@ -132,7 +82,7 @@ FlowItem {
                 y: 100
                 width: 88
                 height: 38
-                text: qsTr("Logout")
+                text: qsTr("Login")
                 font.pixelSize: 18
                 horizontalAlignment: Text.AlignHCenter
                 font.weight: Font.Medium

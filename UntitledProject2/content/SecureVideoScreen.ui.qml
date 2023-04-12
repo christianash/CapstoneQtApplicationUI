@@ -1,13 +1,16 @@
+
+
 /*
 This is a UI file (.ui.qml) that is intended to be edited in Qt Design Studio only.
 It is supposed to be strictly declarative and only uses a subset of QML. If you edit
 this file manually, you might introduce QML code that is not supported by Qt Design Studio.
 Check out https://doc.qt.io/qtcreator/creator-quick-ui-forms.html for details on .ui.qml files.
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import FlowView 1.0
+import QtQuick3D 6.4
+import QtMultimedia 6.3
 
 FlowItem {
     id: flowItem
@@ -15,6 +18,8 @@ FlowItem {
     height: 720
     Rectangle {
         id: background_space
+        x: 0
+        y: 0
         width: 1280
         height: 720
         visible: true
@@ -47,26 +52,26 @@ FlowItem {
 
             Rectangle {
                 id: user1
-                x: 12
-                y: 38
-                width: 308
-                height: 174
+                x: 158
+                y: 17
+                width: 461
+                height: 260
                 color: "#ffffff"
 
                 Text {
                     id: user1_title
-                    x: 72
-                    y: 151
+                    x: 147
+                    y: 229
                     text: qsTr("First and Last Name 1")
                     font.pixelSize: 17
                 }
 
                 Image {
                     id: user1_image
-                    x: 104
-                    y: 27
-                    width: 100
-                    height: 100
+                    x: 156
+                    y: 55
+                    width: 150
+                    height: 150
                     source: "qrc:/qtquickplugin/images/template_image.png"
                     fillMode: Image.PreserveAspectFit
                 }
@@ -74,26 +79,26 @@ FlowItem {
 
             Rectangle {
                 id: user2
-                x: 327
-                y: 38
-                width: 308
-                height: 174
+                x: 661
+                y: 18
+                width: 461
+                height: 260
                 color: "#ffffff"
 
                 Text {
                     id: user2_title
-                    x: 72
-                    y: 151
+                    x: 148
+                    y: 229
                     text: qsTr("First and Last Name 2")
                     font.pixelSize: 17
                 }
 
                 Image {
                     id: user2_image
-                    x: 104
-                    y: 27
-                    width: 100
-                    height: 100
+                    x: 156
+                    y: 55
+                    width: 150
+                    height: 150
                     source: "qrc:/qtquickplugin/images/template_image.png"
                     fillMode: Image.PreserveAspectFit
                 }
@@ -101,26 +106,26 @@ FlowItem {
 
             Rectangle {
                 id: user3
-                x: 642
-                y: 38
-                width: 308
-                height: 174
+                x: 158
+                y: 283
+                width: 461
+                height: 260
                 color: "#ffffff"
 
                 Text {
                     id: user3_title
-                    x: 72
-                    y: 151
+                    x: 142
+                    y: 232
                     text: qsTr("First and Last Name 3")
                     font.pixelSize: 17
                 }
 
                 Image {
                     id: user3_image
-                    x: 104
-                    y: 27
-                    width: 100
-                    height: 100
+                    x: 150
+                    y: 55
+                    width: 150
+                    height: 150
                     source: "qrc:/qtquickplugin/images/template_image.png"
                     fillMode: Image.PreserveAspectFit
                 }
@@ -128,125 +133,36 @@ FlowItem {
 
             Rectangle {
                 id: user4
-                x: 957
-                y: 38
-                width: 308
-                height: 174
+                x: 661
+                y: 283
+                width: 461
+                height: 260
                 color: "#ffffff"
 
                 Text {
                     id: user4_title
-                    x: 72
-                    y: 151
+                    x: 148
+                    y: 226
                     text: qsTr("First and Last Name 4")
                     font.pixelSize: 17
                 }
 
                 Image {
                     id: user4_image
-                    x: 104
-                    y: 27
-                    width: 100
-                    height: 100
+                    x: 156
+                    y: 55
+                    width: 150
+                    height: 150
                     source: "qrc:/qtquickplugin/images/template_image.png"
                     fillMode: Image.PreserveAspectFit
                 }
             }
 
-
-            Rectangle {
-                id: user5
-                x: 12
-                y: 221
-                width: 412
-                height: 235
-                color: "#ffffff"
-
-                Text {
-                    id: user5_title
-                    x: 124
-                    y: 204
-                    text: qsTr("First and Last Name 5")
-                    font.pixelSize: 17
-                }
-
-                Image {
-                    id: user5_image
-                    x: 139
-                    y: 36
-                    width: 134
-                    height: 134
-                    source: "qrc:/qtquickplugin/images/template_image.png"
-                    fillMode: Image.PreserveAspectFit
-                }
-            }
-
-            Rectangle {
-                id: user6
-                x: 433
-                y: 221
-                width: 412
-                height: 235
-                color: "#ffffff"
-
-                Text {
-                    id: user6_title
-                    x: 124
-                    y: 204
-                    text: qsTr("First and Last Name 6")
-                    font.pixelSize: 17
-                }
-
-                Image {
-                    id: user6_image
-                    x: 139
-                    y: 36
-                    width: 134
-                    height: 134
-                    source: "qrc:/qtquickplugin/images/template_image.png"
-                    fillMode: Image.PreserveAspectFit
-                }
-            }
-
-            Rectangle {
-                id: user7
-                x: 855
-                y: 221
-                width: 412
-                height: 235
-                color: "#ffffff"
-
-                Text {
-                    id: user7_title
-                    x: 124
-                    y: 204
-                    text: qsTr("First and Last Name 7")
-                    font.pixelSize: 17
-                }
-
-                Image {
-                    id: user7_image
-                    x: 139
-                    y: 36
-                    width: 134
-                    height: 134
-                    source: "qrc:/qtquickplugin/images/template_image.png"
-                    fillMode: Image.PreserveAspectFit
-                }
-            }
-
-            Text {
-                id: mute_status_text
-                x: 562
-                y: 0
-                text: qsTr("You are currently unmuted")
-                font.pixelSize: 12
-            }
             Rectangle {
                 id: toolbar_frame
                 x: -1
                 y: 549
-                width: 1280
+                width: 1282
                 height: 149
                 color: "#ffffff"
 
@@ -268,15 +184,16 @@ FlowItem {
                     display: AbstractButton.IconOnly
                     icon.source: "images/volume-down.svg.png"
 
+
                     Rectangle {
                         id: volume_frame_pointer
                         x: 36
                         y: -32
                         width: 28
                         height: 28
-                        visible: false
                         color: "#2e2e2e"
                         rotation: 45
+                        visible: false
                     }
 
                     Text {
@@ -300,8 +217,8 @@ FlowItem {
                         y: -94
                         width: 412
                         height: 76
-                        visible: false
                         color: "#2e2e2e"
+                        visible: false
                     }
 
                     Custon_volume_slider {
@@ -317,11 +234,11 @@ FlowItem {
                         id: volume_slider_text
                         x: -153
                         y: -88
-                        visible: false
                         color: "#ffffff"
                         text: qsTr("Call Volume:")
                         font.pixelSize: 15
                         font.bold: true
+                        visible: false
                     }
                 }
 
@@ -343,6 +260,8 @@ FlowItem {
                     wheelEnabled: true
                     display: AbstractButton.IconOnly
                     icon.source: "images/1077114.png"
+                    onClicked: participants_list_scrollview.visible
+                               = !participants_list_scrollview.visible
 
                     Text {
                         id: participant_title
@@ -357,45 +276,6 @@ FlowItem {
                         font.family: "Verdana"
                         font.styleName: "Bold"
                         font.wordSpacing: 1
-                    }
-
-                    Rectangle {
-                        id: participant_frame_pointer
-                        x: 36
-                        y: -32
-                        width: 28
-                        height: 28
-                        visible: false
-                        color: "#2e2e2e"
-                        rotation: 45
-                    }
-
-
-
-                    Rectangle {
-                        id: participant_frame
-                        x: -160
-                        y: -94
-                        width: 412
-                        height: 76
-                        visible: false
-                        color: "#2e2e2e"
-                    }
-                    Text {
-                        id: participant_list_title
-                        x: -153
-                        y: -88
-                        visible: false
-                        color: "#ffffff"
-                        text: qsTr("Call Volume:")
-                        font.pixelSize: 15
-                        font.bold: true
-                    }
-                    Text {
-                        id: participant_list_names
-                        visible: false
-                        text: qsTr("Text")
-                        font.pixelSize: 12
                     }
                 }
 
@@ -452,6 +332,8 @@ FlowItem {
                     display: AbstractButton.IconOnly
                     icon.source: "images/dialpad.svg.svg"
 
+                    onClicked: dial_pad.visible = !dial_pad.visible
+
                     Text {
                         id: dialpad_title
                         x: 0
@@ -465,38 +347,6 @@ FlowItem {
                         font.family: "Verdana"
                         font.styleName: "Bold"
                         font.wordSpacing: 1
-                    }
-
-                    Rectangle {
-                        id: participant_frame_pointer1
-                        x: 24
-                        y: -44
-                        width: 28
-                        height: 28
-                        visible: false
-                        color: "#2e2e2e"
-                        rotation: 45
-                    }
-
-                    Rectangle {
-                        id: participant_frame1
-                        x: -172
-                        y: -106
-                        width: 412
-                        height: 76
-                        visible: false
-                        color: "#2e2e2e"
-                    }
-
-                    Text {
-                        id: participant_list_title1
-                        x: -165
-                        y: -100
-                        visible: false
-                        color: "#ffffff"
-                        text: qsTr("Call Volume:")
-                        font.pixelSize: 15
-                        font.bold: true
                     }
                 }
 
@@ -520,110 +370,370 @@ FlowItem {
                         font.wordSpacing: 1
                     }
                 }
-
-                Button {
-                    id: camera_button
-                    x: 1137
-                    y: 12
-                    width: 100
-                    height: 100
-                    visible: true
-                    flat: false
-                    icon.height: 70
-                    display: AbstractButton.IconOnly
-                    checkable: true
-                    highlighted: false
-                    icon.width: 70
-                    wheelEnabled: true
-                    Text {
-                        id: camera_title
-                        x: 0
-                        y: 103
-                        width: 100
-                        height: 26
-                        text: "Camera"
-                        font.letterSpacing: 0.5
-                        font.pixelSize: 18
-                        horizontalAlignment: Text.AlignHCenter
-                        font.family: "Verdana"
-                        font.styleName: "Bold"
-                        font.wordSpacing: 1
-                    }
-
-                    Rectangle {
-                        id: camera_pointer
-                        x: -407
-                        y: -46
-                        width: 28
-                        height: 28
-                        visible: false
-                        color: "#2e2e2e"
-                        rotation: 45
-                    }
-
-                    Rectangle {
-                        id: camera_frame
-                        x: -603
-                        y: -108
-                        width: 412
-                        height: 76
-                        visible: false
-                        color: "#2e2e2e"
-                    }
-
-                    Text {
-                        id: camera_text
-                        x: -596
-                        y: -102
-                        visible: false
-                        color: "#ffffff"
-                        text: qsTr("Call Volume:")
-                        font.pixelSize: 15
-                        font.bold: true
-                    }
-
-                    Image {
-                        id: preview_image
-                        width: 100
-                        height: 100
-                        visible: false
-                        source: "qrc:/qtquickplugin/images/template_image.png"
-                        fillMode: Image.PreserveAspectFit
-                    }
-
-                    Text {
-                        id: preview_text
-                        visible: false
-                        text: qsTr("Text")
-                        font.pixelSize: 12
-                    }
-                    font.pointSize: 17
-                    icon.color: "#000000"
-                    icon.cache: true
-                    icon.source: "images/camera.svg.png"
-                }
             }
-        }
-
-        Image {
-            id: call_type_icon
-            x: 8
-            y: 8
-            width: 44
-            height: 44
-            source: "images/lock.svg.png"
-            fillMode: Image.PreserveAspectFit
 
             Text {
-                id: call_type_text
-                x: 58
-                y: 16
-                text: qsTr("Secure Call in progress...")
-                font.pixelSize: 15
+                id: mute_status_text
+                x: 558
+                y: -8
+                text: qsTr("You are currently unmuted")
+                font.pixelSize: 14
+            }
+        }
+
+        Rectangle {
+            id: dial_pad_frame
+            x: 577
+            y: 29
+            width: 366
+            height: 530
+            visible: false
+            color: "#2e2e2e"
+            Button {
+                x: 15
+                y: 110
+                width: 112
+                height: 50
+                text: qsTr("1")
+                font.pointSize: 15
+                icon.width: 30
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 130
+                y: 110
+                width: 112
+                height: 50
+                text: qsTr("2")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 245
+                y: 110
+                width: 112
+                height: 50
+                text: qsTr("3")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 15
+                y: 175
+                width: 112
+                height: 50
+                text: qsTr("4")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 130
+                y: 175
+                width: 112
+                height: 50
+                text: qsTr("5")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 245
+                y: 175
+                width: 112
+                height: 50
+                text: qsTr("6")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 15
+                y: 240
+                width: 112
+                height: 50
+                text: qsTr("7")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 130
+                y: 240
+                width: 112
+                height: 50
+                text: qsTr("8")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 245
+                y: 240
+                width: 112
+                height: 50
+                text: qsTr("9")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 130
+                y: 305
+                width: 112
+                height: 50
+                text: qsTr("0")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 245
+                y: 305
+                width: 112
+                height: 50
+                text: qsTr("#")
+                font.pointSize: 15
+                onClicked: dial_textid.text += text
+            }
+
+            Button {
+                x: 15
+                y: 305
+                width: 112
+                height: 50
+                text: qsTr("*")
+                font.pointSize: 20
+                onClicked: dial_textid.text += text
+            }
+
+            Rectangle {
+                x: 15
+                y: 27
+                width: 342
+                height: 71
+                color: "#cbcbcb"
+                border.width: 1
+                TextEdit {
+                    id: dial_textid
+                    x: 16
+                    y: 8
+                    width: 318
+                    height: 55
+                    text: qsTr("")
+                    font.pixelSize: 12
+                }
+            }
+
+            Custom_Call_Button {
+                x: 135
+                y: 382
+                width: 99
+                height: 99
+                Text {
+                    id: placecall_textid
+                    x: 13
+                    y: 112
+                    color: "#ffffff"
+                    text: qsTr("Place Call")
+                    font.pixelSize: 16
+                    font.bold: true
+                }
+            }
+
+            Button {
+                id: clear_btn
+                x: 279
+                y: 38
+                width: 70
+                height: 50
+                text: qsTr("Clear")
+                onClicked: dial_textid.text = ""
+            }
+
+            Rectangle {
+                id: rectangle1
+                x: 169
+                y: 516
+                width: 28
+                height: 28
+                color: "#2e2e2e"
+                rotation: 45
+            }
+
+            Text {
+                id: text1
+                x: 15
+                y: 5
+                color: "#ffffff"
+                text: qsTr("Dialpad:")
+                font.pixelSize: 12
+                font.family: "Verdana"
+                font.styleName: "Regular"
+                clip: true
             }
         }
 
 
+        Custom_Camera_Button {
+            id: custom_Camera_Button
+            x: 1138
+            y: 581
+
+            Text {
+                id: camera_textid
+                x: 15
+                y: 100
+                text: qsTr("Camera")
+                font.pixelSize: 18
+                font.styleName: "Bold"
+                font.family: "Verdana"
+            }
+
+            Rectangle {
+                id: camera_frame
+                x: -719
+                y: -244
+                width: 200
+                height: 200
+                visible: false
+                color: "#2e2e2e"
+                Rectangle {
+                    id: rectangle3
+                    width: 200
+                    height: 200
+                    color: "#ffffff"
+                }
+
+                Rectangle {
+                    id: rectangle2
+                    width: 200
+                    height: 200
+                    color: "#2e2e2e"
+                }
+
+                Text {
+                    id: text2
+                    x: 0
+                    y: 0
+                    visible: false
+                    text: user1_title.text
+                    font.pixelSize: 20
+                }
+
+                Text {
+                    id: text3
+                    x: 0
+                    y: 48
+                    visible: false
+                    text: user2_title.text
+                    font.pixelSize: 20
+                }
+
+                Image {
+                    id: image
+                    width: 100
+                    height: 100
+                    source: "qrc:/qtquickplugin/images/template_image.png"
+                    fillMode: Image.PreserveAspectFit
+                }
+
+                Switch {
+                    id: switch1
+                    text: qsTr("Switch")
+                }
+
+            }
+        }
+
+        Text {
+            id: callstatus_id
+            x: 42
+            y: 8
+            text: qsTr("Secure Call in progress...")
+            font.pixelSize: 18
+        }
+
+        Rectangle {
+            id: participant_frame
+            x: 420
+            y: 340
+            width: 200
+            height: 200
+            visible: false
+            color: "#2e2e2e"
+
+
+            Rectangle {
+                id: rectangle
+                width: 200
+                height: 200
+                color: "#2e2e2e"
+            }
+
+            Text {
+                id: participant1_id
+                x: 0
+                y: 0
+                visible: false
+                text: user1_title.text
+                font.pixelSize: 20
+            }
+
+            Text {
+                id: participant2_id
+                x: 0
+                y: 48
+                visible: false
+                text: user2_title.text
+                font.pixelSize: 20
+            }
+
+            Text {
+                id: participant3_id
+                x: 0
+                y: 100
+                visible: false
+                text: user3_title.text
+                font.pixelSize: 20
+            }
+
+            Text {
+                id: participant4_id
+                x: 2
+                y: 157
+                visible: false
+                text: user4_title.text
+                font.pixelSize: 20
+            }
+
+            Text {
+                id: participants_text
+                x: 6
+                y: 7
+                visible: false
+                text: qsTr("Text")
+                font.pixelSize: 12
+            }
+
+        }
+    }
+
+    Item {
+        id: __materialLibrary__
+    }
+
+    Image {
+        id: image1
+        x: 8
+        y: 8
+        width: 27
+        height: 27
+        source: "images/lock.svg.png"
+        fillMode: Image.PreserveAspectFit
     }
     states: [
         State {
@@ -631,12 +741,13 @@ FlowItem {
             when: volume_button.checked
 
             PropertyChanges {
-                target: volume_frame_pointer
+                target: volume_frame
                 visible: true
+                radius: 5
             }
 
             PropertyChanges {
-                target: volume_frame
+                target: volume_title
                 visible: true
             }
 
@@ -649,23 +760,28 @@ FlowItem {
                 target: volume_slider_text
                 visible: true
             }
+
+            PropertyChanges {
+                target: volume_frame_pointer
+                visible: true
+            }
+
             PropertyChanges {
                 target: participant_list_button
                 opacity: 0.5
                 checkable: false
-                checked: false
+            }
+
+            PropertyChanges {
+                target: end_call_button
+                opacity: 0.5
+                checkable: false
             }
 
             PropertyChanges {
                 target: dialpad_button
                 opacity: 0.5
                 checkable: false
-                checked: false
-            }
-
-            PropertyChanges {
-                target: end_call_button
-                opacity: 0.5
             }
 
             PropertyChanges {
@@ -674,9 +790,22 @@ FlowItem {
             }
 
             PropertyChanges {
-                target: camera_button
+                target: custom_Camera_Button
                 opacity: 0.5
                 checkable: false
+            }
+
+            PropertyChanges {
+                target: participant_list_button
+                checked: false
+            }
+            PropertyChanges {
+                target: dialpad_button
+                checked: false
+            }
+            PropertyChanges {
+                target: custom_Camera_Button
+                checked: false
             }
         },
         State {
@@ -684,62 +813,73 @@ FlowItem {
             when: participant_list_button.checked
 
             PropertyChanges {
-                target: participant_list_names
-                x: -40
-                y: -196
-                width: 176
-                height: 170
-                color: "#ffffff"
-                font.pixelSize: 17
-                verticalAlignment: Text.AlignBottom
-                wrapMode: Text.NoWrap
-                font.weight: Font.Medium
-            }
-
-            PropertyChanges {
-                target: participant_frame_pointer
-                visible: true
-            }
-
-            PropertyChanges {
                 target: participant_frame
-                x: -50
-                y: -240
-                width: 197
-                height: 222
+                x: 407
+                y: 344
+                width: 222
+                height: 221
                 visible: true
+                color: "#2e2e2e"
+                radius: 5
             }
 
             PropertyChanges {
-                target: participant_list_title
-                x: -40
-                y: -229
+                target: participant1_id
+                x: 6
+                y: 29
                 visible: true
+                color: "#ffffff"
+            }
+
+            PropertyChanges {
+                target: participant2_id
+                x: 6
+                y: 77
+                visible: true
+                color: "#ffffff"
+            }
+
+            PropertyChanges {
+                target: participant3_id
+                x: 6
+                y: 129
+                visible: true
+                color: "#ffffff"
+            }
+
+            PropertyChanges {
+                target: participant4_id
+                x: 8
+                y: 186
+                visible: true
+                color: "#ffffff"
+            }
+
+            PropertyChanges {
+                target: participants_text
+                x: 8
+                y: 4
+                visible: true
+                color: "#ffffff"
                 text: qsTr("Participants:")
-            }
-
-            PropertyChanges {
-                target: background_space
-                x: 0
-                y: 0
+                font.pixelSize: 14
+                font.bold: true
             }
 
             PropertyChanges {
                 target: volume_button
                 opacity: 0.5
                 checkable: false
-                checked: false
-            }
-
-            PropertyChanges {
-                target: dialpad_button
-                opacity: 0.5
-                checkable: false
-                checked: false
             }
 
             PropertyChanges {
                 target: end_call_button
+                opacity: 0.5
+                checkable: false
+            }
+
+            PropertyChanges {
+                target: dialpad_button
                 opacity: 0.5
                 checkable: false
             }
@@ -751,9 +891,36 @@ FlowItem {
             }
 
             PropertyChanges {
-                target: camera_button
+                target: custom_Camera_Button
                 opacity: 0.5
                 checkable: false
+            }
+
+            PropertyChanges {
+                target: user1_title
+                text: qsTr("First and Last Name 1")
+            }
+
+            PropertyChanges {
+                target: rectangle
+                x: 100
+                y: 208
+                width: 23
+                height: 23
+                color: "#2e2e2e"
+                rotation: 45
+            }
+            PropertyChanges {
+                target: volume_button
+                checked: false
+            }
+            PropertyChanges {
+                target: dialpad_button
+                checked: false
+            }
+            PropertyChanges {
+                target: custom_Camera_Button
+                checked: false
             }
         },
         State {
@@ -761,71 +928,120 @@ FlowItem {
             when: dialpad_button.checked
 
             PropertyChanges {
+                target: dial_pad_frame
+                x: 577
+                y: 29
+                width: 372
+                height: 530
+                visible: true
+                radius: 5
+                border.width: 0
+            }
+
+            PropertyChanges {
                 target: volume_button
                 opacity: 0.5
-                flat: false
                 checkable: false
-                checked: false
             }
 
             PropertyChanges {
                 target: participant_list_button
                 opacity: 0.5
-                flat: false
                 checkable: false
-                checked: false
             }
 
             PropertyChanges {
                 target: end_call_button
                 opacity: 0.5
-                flat: false
                 checkable: false
             }
 
             PropertyChanges {
                 target: custom_Mute_Button
                 opacity: 0.5
-                flat: false
-                checkable: true
             }
 
             PropertyChanges {
-                target: camera_button
+                target: custom_Camera_Button
                 opacity: 0.5
                 checkable: false
             }
 
             PropertyChanges {
-                target: participant_frame_pointer1
-                x: 36
-                y: -40
-                opacity: 1
-                visible: true
+                target: dial_textid
+                x: 16
+                y: 8
+                width: 247
+                height: 55
+                font.pixelSize: 24
+                font.bold: true
             }
-
             PropertyChanges {
-                target: participant_frame1
-                x: -127
-                y: -523
-                width: 343
-                height: 499
-                opacity: 1
-                visible: true
+                target: participant_list_button
+                checked: false
             }
-
             PropertyChanges {
-                target: participant_list_title1
-                x: -120
-                y: -513
-                opacity: 1
-                visible: true
-                text: qsTr("Dial Pad:")
+                target: volume_button
+                checked: false
+            }
+            PropertyChanges {
+                target: custom_Camera_Button
+                checked: false
             }
         },
         State {
             name: "CameraCheckedState"
-            when: camera_button.checked
+            when: custom_Camera_Button.checked
+
+            PropertyChanges {
+                target: camera_frame
+                x: -359
+                y: -400
+                width: 464
+                height: 383
+                visible: true
+                radius: 5
+                border.width: 0
+            }
+
+            PropertyChanges {
+                target: rectangle2
+                x: 396
+                y: 371
+                width: 23
+                height: 23
+                visible: true
+                color: "#2e2e2e"
+                rotation: -315
+            }
+
+            PropertyChanges {
+                target: text2
+                x: 10
+                y: 5
+                visible: true
+                color: "#ffffff"
+                text: "Camera:"
+                font.bold: true
+            }
+
+            PropertyChanges {
+                target: text3
+                x: 6
+                y: 68
+                visible: true
+                color: "#ffffff"
+                text: "Camera Preview:"
+                font.pixelSize: 16
+            }
+
+            PropertyChanges {
+                target: image
+                x: 2
+                y: 108
+                width: 461
+                height: 260
+            }
 
             PropertyChanges {
                 target: volume_button
@@ -854,51 +1070,38 @@ FlowItem {
             PropertyChanges {
                 target: custom_Mute_Button
                 opacity: 0.5
-                checkable: true
+            }
+            PropertyChanges {
+                target: participant_list_button
+                checked: false
+            }
+            PropertyChanges {
+                target: dialpad_button
+                checked: false
+            }
+            PropertyChanges {
+                target: volume_button
+                checked: false
             }
 
             PropertyChanges {
-                target: camera_pointer
-                x: 36
-                y: -43
-                visible: true
+                target: switch1
+                x: 383
+                y: 13
+                width: 65
+                height: 40
+                text: qsTr("Switch")
             }
 
             PropertyChanges {
-                target: camera_frame
-                x: -269
-                y: -340
-                width: 400
-                height: 311
-                visible: true
-            }
-
-            PropertyChanges {
-                target: camera_text
-                x: -252
-                y: -329
-                visible: true
-                text: qsTr("Camera:")
-            }
-
-            PropertyChanges {
-                target: preview_image
-                x: -252
-                y: -269
-                width: 368
-                height: 208
-                visible: true
-            }
-
-            PropertyChanges {
-                target: preview_text
-                x: -252
-                y: -291
-                visible: true
-                color: "#ffffff"
-                text: qsTr("camera preview:")
+                target: rectangle3
+                x: 383
+                y: 5
+                width: 73
+                height: 54
+                color: "#797979"
+                radius: 5
             }
         }
     ]
 }
-

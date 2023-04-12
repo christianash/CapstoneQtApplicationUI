@@ -35,14 +35,12 @@ Button {
         color: "#e0e0e0"
 
         Image {
-            id: image
-            x: 15
-            y: 15
-            width: 70
-            height: 70
-            source: "images/microphone.svg.png"
-            sourceSize.height: 70
-            sourceSize.width: 70
+            id: camera
+            x: 12
+            y: 12
+            width: 77
+            height: 77
+            source: "images/camera.svg.png"
             fillMode: Image.PreserveAspectFit
         }
     }
@@ -58,30 +56,22 @@ Button {
                 layer.smooth: false
             }
 
-            PropertyChanges {
-                target: mute_status_text
-                text: "You are currently unmuted"
 
-            }
         },
         State {
             name: "down"
             when: mute_button.checked
 
-            PropertyChanges {
-                target: image
-                source: "images/microphone-slash.svg.svg"
-            }
-
-            PropertyChanges {
-                target: mute_status_text
-                text: "You are currently muted"
-
-            }
 
             PropertyChanges {
                 target: background_color
-                color: "#ef2525"
+                color: "#2c4c97"
+            }
+
+            PropertyChanges {
+                target: camera
+                x: 12
+                y: 12
             }
         }
     ]

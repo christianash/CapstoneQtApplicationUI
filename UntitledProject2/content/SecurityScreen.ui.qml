@@ -85,7 +85,7 @@ FlowItem {
                 width: 167
                 height: 97
                 color: "#a3a0a0"
-                border.width: 3
+                border.width: 0
 
                 Image {
                     id: key_image

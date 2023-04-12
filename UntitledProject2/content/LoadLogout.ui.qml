@@ -49,7 +49,7 @@ FlowItem {
                 id: loading_text
                 x: 229
                 y: 206
-                text: qsTr("Call Ended...")
+                text: qsTr("Logging Out")
                 font.pixelSize: 15
             }
 
@@ -59,17 +59,7 @@ FlowItem {
                 y: -186
                 width: 44
                 height: 44
-                source: "images/home.svg.svg"
-                fillMode: Image.PreserveAspectFit
-            }
-
-            Image {
-                id: call_type_icon1
-                x: -359
-                y: -150
-                width: 44
-                height: 44
-                source: "images/arrow-left-55.png"
+                source: "images/avatar-1.svg.svg"
                 fillMode: Image.PreserveAspectFit
             }
         }
@@ -79,13 +69,5 @@ FlowItem {
         id: busyIndicator
         x: 610
         y: 330
-    }
-
-    Text {
-        id: text1
-        x: 590
-        y: 426
-        text: qsTr("Returning to Home")
-        font.pixelSize: 12
     }
 }
