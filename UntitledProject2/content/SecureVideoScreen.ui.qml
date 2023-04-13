@@ -634,16 +634,11 @@ FlowItem {
                 }
 
                 Image {
-                    id: image
+                    id: camera_image
                     width: 100
                     height: 100
                     source: "qrc:/qtquickplugin/images/template_image.png"
                     fillMode: Image.PreserveAspectFit
-                }
-
-                Switch {
-                    id: switch1
-                    text: qsTr("Switch")
                 }
 
             }
@@ -733,6 +728,54 @@ FlowItem {
         width: 27
         height: 27
         source: "images/lock.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Button {
+        id: cam_switch
+        x: 1163
+        y: 198
+        visible: false
+        text: qsTr("Button")
+    }
+
+    Image {
+        id: speaker_icon
+        x: 577
+        y: 254
+        width: 43
+        height: 43
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: speaker_icon1
+        x: 577
+        y: 518
+        width: 43
+        height: 43
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: speaker_icon2
+        x: 1080
+        y: 254
+        width: 43
+        height: 43
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: speaker_icon3
+        x: 1080
+        y: 518
+        width: 43
+        height: 43
+        source: "images/volume-off.svg.png"
         fillMode: Image.PreserveAspectFit
     }
     states: [
@@ -991,7 +1034,7 @@ FlowItem {
         },
         State {
             name: "CameraCheckedState"
-            when: custom_Camera_Button.checked
+            when: custom_Camera_Button.checked && !cam_switch.checked
 
             PropertyChanges {
                 target: camera_frame
@@ -1036,11 +1079,12 @@ FlowItem {
             }
 
             PropertyChanges {
-                target: image
+                target: camera_image
                 x: 2
                 y: 108
                 width: 461
                 height: 260
+                source: "qrc:/qtquickplugin/images/template_image.png"
             }
 
             PropertyChanges {
@@ -1085,12 +1129,121 @@ FlowItem {
             }
 
             PropertyChanges {
-                target: switch1
+                target: rectangle3
                 x: 383
-                y: 13
-                width: 65
-                height: 40
-                text: qsTr("Switch")
+                y: 5
+                width: 73
+                height: 54
+                color: "#797979"
+                radius: 5
+            }
+
+            PropertyChanges {
+                target: cam_switch
+                x: 1164
+                y: 188
+                width: 69
+                height: 50
+                visible: true
+                text: qsTr("Toggle")
+                checkable: true
+            }
+        },          State {
+            name: "CameraCheckedState1"
+            when: cam_switch.checked && custom_Camera_Button.checked
+            PropertyChanges {
+                target: camera_frame
+                x: "-359"
+                y: "-400"
+                width: 464
+                height: 383
+                visible: true
+                radius: 5
+                border.width: 0
+            }
+
+            PropertyChanges {
+                target: rectangle2
+                x: 396
+                y: 371
+                width: 23
+                height: 23
+                visible: true
+                color: "#2e2e2e"
+                rotation: "-315"
+            }
+
+            PropertyChanges {
+                target: text2
+                x: 10
+                y: 5
+                visible: true
+                color: "#ffffff"
+                text: "Camera:"
+                font.bold: true
+            }
+
+            PropertyChanges {
+                target: text3
+                x: 6
+                y: 68
+                visible: true
+                color: "#ffffff"
+                text: "Camera Preview:"
+                font.pixelSize: 16
+            }
+
+            PropertyChanges {
+                target: camera_image
+                x: 2
+                y: 108
+                width: 461
+                height: 260
+                source: "images/istockphoto-1173667014-612x612.jpg"
+            }
+
+            PropertyChanges {
+                target: volume_button
+                opacity: 0.5
+                checkable: false
+            }
+
+            PropertyChanges {
+                target: participant_list_button
+                opacity: 0.5
+                checkable: false
+            }
+
+            PropertyChanges {
+                target: end_call_button
+                opacity: 0.5
+                checkable: false
+            }
+
+            PropertyChanges {
+                target: dialpad_button
+                opacity: 0.5
+                checkable: false
+            }
+
+            PropertyChanges {
+                target: custom_Mute_Button
+                opacity: 0.5
+            }
+
+            PropertyChanges {
+                target: participant_list_button
+                checked: false
+            }
+
+            PropertyChanges {
+                target: dialpad_button
+                checked: false
+            }
+
+            PropertyChanges {
+                target: volume_button
+                checked: false
             }
 
             PropertyChanges {
@@ -1101,6 +1254,17 @@ FlowItem {
                 height: 54
                 color: "#797979"
                 radius: 5
+            }
+
+            PropertyChanges {
+                target: cam_switch
+                x: 1164
+                y: 188
+                width: 69
+                height: 50
+                visible: true
+                text: qsTr("Toggle")
+                checkable: true
             }
         }
     ]

@@ -819,6 +819,76 @@ FlowItem {
         source: "images/lock-open.svg.svg"
         fillMode: Image.PreserveAspectFit
     }
+
+    Image {
+        id: speaker_icon
+        x: 295
+        y: 203
+        width: 29
+        height: 29
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: speaker_icon1
+        x: 610
+        y: 203
+        width: 29
+        height: 29
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: speaker_icon2
+        x: 923
+        y: 203
+        width: 29
+        height: 29
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: speaker_icon3
+        x: 1236
+        y: 203
+        width: 29
+        height: 29
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: speaker_icon4
+        x: 401
+        y: 445
+        width: 29
+        height: 29
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: speaker_icon5
+        x: 817
+        y: 445
+        width: 29
+        height: 29
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: speaker_icon6
+        x: 1236
+        y: 445
+        width: 29
+        height: 29
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
     states: [
         State {
             name: "State1"

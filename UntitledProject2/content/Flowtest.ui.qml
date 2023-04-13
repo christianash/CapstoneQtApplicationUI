@@ -220,6 +220,16 @@ FlowView {
             id: flowTransition28
             to: mainLandingScreenGuest
             from: loadLogout
+        },
+        FlowTransition {
+            id: flowTransition29
+            to: mainLandingScreenGuest
+            from: videoSecureScreen
+        },
+        FlowTransition {
+            id: flowTransition30
+            to: mainLandingScreenGuest
+            from: audioSecureScreen
         }
     ]
 
@@ -266,6 +276,14 @@ FlowView {
             height: 43
             goBack: false
         }
+
+        FlowActionArea {
+            target: flowTransition29
+            x: 8
+            y: 626
+            width: 166
+            height: 72
+        }
     }
 
     SecurityScreen {
@@ -277,6 +295,14 @@ FlowView {
             y: 379
             width: 105
             height: 45
+        }
+
+        FlowActionArea {
+            target: flowTransition30
+            x: 8
+            y: 630
+            width: 167
+            height: 72
         }
     }
 
@@ -429,13 +455,13 @@ FlowView {
 
 /*##^##
 Designer {
-    D{i:0}D{i:1;flowX:4169.103734202678;flowY:2053.9408703613826}D{i:2;flowX:4237.989200010567;flowY:271.0107999894325}
-D{i:46;flowX:869.2106461225521;flowY:81.4745228578659}D{i:50;flowX:2648.1801805578843;flowY:1069.3691304712409}
-D{i:52;flowX:2635;flowY:298.2190591983914}D{i:54;flowX:1758.912849552658;flowY:1934.776977179697}
-D{i:57;flowX:1735.7707439828082;flowY:3083.133813692182}D{i:59;flowX:6446.295789678781;flowY:720.530526452521}
-D{i:61;flowX:6337.012110356406;flowY:2153.530526452521}D{i:63;flowX:256.00471284992284;flowY:1427.776730477795}
-D{i:65;flowX:5113.35181134726;flowY:535.9900357731226}D{i:67;flowX:4924.535113210646;flowY:1408}
-D{i:69;flowX:3177.97883752953;flowY:5458.731427770792}D{i:72;flowX:1252.3657138853957;flowY:4258.043427210346}
-D{i:75;flowX:4309.865456750432;flowY:3748.46013673284}
+    D{i:0}D{i:48;flowX:869.2106461225521;flowY:81.4745228578659}D{i:52;flowX:2648.1801805578843;flowY:1069.3691304712409}
+D{i:55;flowX:2635;flowY:298.2190591983914}D{i:58;flowX:1758.912849552658;flowY:1934.776977179697}
+D{i:61;flowX:1735.7707439828082;flowY:3083.133813692182}D{i:63;flowX:6446.295789678781;flowY:720.530526452521}
+D{i:65;flowX:6337.012110356406;flowY:2153.530526452521}D{i:67;flowX:256.00471284992284;flowY:1427.776730477795}
+D{i:69;flowX:5113.35181134726;flowY:535.9900357731226}D{i:71;flowX:4924.535113210646;flowY:1408}
+D{i:73;flowX:3177.97883752953;flowY:5458.731427770792}D{i:76;flowX:1252.3657138853957;flowY:4258.043427210346}
+D{i:79;flowX:4309.865456750432;flowY:3748.46013673284}D{i:1;flowX:4169.103734202678;flowY:2053.9408703613826}
+D{i:2;flowX:4237.989200010567;flowY:271.0107999894325}
 }
 ##^##*/

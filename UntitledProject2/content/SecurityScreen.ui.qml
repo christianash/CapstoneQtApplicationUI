@@ -55,7 +55,10 @@ FlowItem {
                 id: security_pin_submit_button
                 x: 295
                 y: 189
+                width: 103
+                height: 40
                 text: qsTr("Submit")
+                font.pointSize: 12
                 icon.source: "images/arrow-right-33.png"
             }
 
@@ -106,5 +109,16 @@ FlowItem {
                 }
             }
         }
+    }
+
+    Button {
+        id: button
+        x: 14
+        y: 630
+        width: 159
+        height: 71
+        text: qsTr("Return Home")
+        font.pointSize: 12
+        icon.source: "images/home.svg.svg"
     }
 }
