@@ -47,10 +47,10 @@ FlowItem {
 
             Text {
                 id: loading_text
-                x: 229
-                y: 206
-                text: qsTr("Logging Out")
-                font.pixelSize: 15
+                x: 209
+                y: 197
+                text: qsTr("Logging Out...")
+                font.pixelSize: 20
             }
 
             Image {

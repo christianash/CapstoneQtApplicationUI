@@ -106,6 +106,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("1")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -116,6 +118,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("2")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -126,6 +130,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("3")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -136,6 +142,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("4")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -146,6 +154,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("5")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -156,6 +166,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("6")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -166,6 +178,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("7")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -176,6 +190,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("8")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -186,6 +202,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("9")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -196,6 +214,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("0")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -206,6 +226,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("#")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -216,6 +238,8 @@ FlowItem {
                 width: 170
                 height: 75
                 text: qsTr("*")
+                font.bold: true
+                font.pointSize: 18
                 onClicked: dynamic_entry_text.text += text
             }
 
@@ -247,11 +271,11 @@ FlowItem {
                 onClicked: dynamic_entry_text.text = ""
                 Text {
                     id: call_text
-                    x: 13
-                    y: 112
+                    x: 9
+                    y: 106
                     text: qsTr("Place Call")
-                    font.pixelSize: 16
-                    font.bold: true
+                    font.pixelSize: 20
+                    font.bold: false
 
                 }
             }
@@ -263,6 +287,8 @@ FlowItem {
                 width: 170
                 height: 100
                 text: qsTr("Clear")
+                font.bold: true
+                font.pointSize: 15
                 onClicked: dynamic_entry_text.text = ""
             }
         }
@@ -279,11 +305,11 @@ FlowItem {
 
         Text {
             id: page_title_text
-            x: 92
+            x: 84
             y: 38
-            width: 351
+            width: 367
             height: 40
-            text: qsTr("Monday 10th April 2023")
+            text: qsTr("Thursday 13th April 2023")
             font.pixelSize: 28
             font.family: "Verdana"
             font.styleName: "Bold"

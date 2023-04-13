@@ -77,9 +77,10 @@ FlowItem {
                 id: enter_pin_text
                 x: 74
                 y: 235
-                color: "#000000"
-                text: qsTr("Enter Your Secure Pin")
+                color: "#c81515"
+                text: qsTr("*Pin Entered is Invalid")
                 font.pixelSize: 18
+                font.underline: true
             }
 
             Rectangle {

@@ -16,6 +16,16 @@ FlowItem {
     id: flowItem
     width: 1280
     height: 720
+    Image {
+        id: speaker_icon4
+        x: 401
+        y: 445
+        width: 29
+        height: 29
+        source: "images/volume-off.svg.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
     Rectangle {
         id: background_space
         x: 0
@@ -349,10 +359,10 @@ FlowItem {
 
             Text {
                 id: mute_status_text
-                x: 558
-                y: -8
+                x: 525
+                y: 0
                 text: qsTr("You are currently unmuted")
-                font.pixelSize: 14
+                font.pixelSize: 20
             }
 
             Rectangle {
@@ -668,10 +678,10 @@ FlowItem {
                 id: text2
                 x: 49
                 y: 15
-                width: 149
+                width: 181
                 height: 21
                 text: qsTr("Initiate Secure Call")
-                font.pixelSize: 16
+                font.pixelSize: 18
                 horizontalAlignment: Text.AlignHCenter
                 font.bold: true
             }
@@ -693,7 +703,7 @@ FlowItem {
                 width: 215
                 height: 75
                 text: qsTr("  Audio Call")
-                font.pointSize: 16
+                font.pointSize: 19
                 icon.height: 50
                 icon.width: 50
                 icon.source: "images/volume-up.svg.png"
@@ -706,7 +716,7 @@ FlowItem {
                 width: 215
                 height: 75
                 text: qsTr("    Video Call")
-                font.pointSize: 16
+                font.pointSize: 19
                 icon.height: 50
                 icon.width: 50
                 icon.source: "images/camera.svg.png"
@@ -718,7 +728,7 @@ FlowItem {
             x: 42
             y: 8
             text: qsTr("Clear Call in progress...")
-            font.pixelSize: 18
+            font.pixelSize: 20
         }
 
         Rectangle {
@@ -860,15 +870,6 @@ FlowItem {
         fillMode: Image.PreserveAspectFit
     }
 
-    Image {
-        id: speaker_icon4
-        x: 401
-        y: 445
-        width: 29
-        height: 29
-        source: "images/volume-off.svg.png"
-        fillMode: Image.PreserveAspectFit
-    }
 
     Image {
         id: speaker_icon5
@@ -914,6 +915,7 @@ FlowItem {
             PropertyChanges {
                 target: volume_slider_text
                 visible: true
+                font.pixelSize: 18
             }
 
             PropertyChanges {
@@ -997,12 +999,12 @@ FlowItem {
 
             PropertyChanges {
                 target: participants_text
-                x: 8
-                y: 4
+                x: 6
+                y: 0
                 visible: true
                 color: "#ffffff"
                 text: qsTr("Participants:")
-                font.pixelSize: 14
+                font.pixelSize: 18
                 font.bold: true
             }
 
@@ -1068,6 +1070,11 @@ FlowItem {
                 color: "#ffffff"
                 font.pixelSize: 20
             }
+
+            PropertyChanges {
+                target: speaker_icon4
+                visible: false
+            }
         },
         State {
             name: "DialCheckedState"
@@ -1114,6 +1121,31 @@ FlowItem {
                 height: 55
                 font.pixelSize: 24
                 font.bold: true
+            }
+
+            PropertyChanges {
+                target: speaker_icon1
+                visible: false
+            }
+
+            PropertyChanges {
+                target: speaker_icon2
+                visible: false
+            }
+
+            PropertyChanges {
+                target: speaker_icon5
+                visible: false
+            }
+
+            PropertyChanges {
+                target: clear_btn
+                font.pointSize: 14
+            }
+
+            PropertyChanges {
+                target: text1
+                font.pixelSize: 16
             }
         }
     ]

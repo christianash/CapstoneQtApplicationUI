@@ -47,10 +47,10 @@ FlowItem {
 
             Text {
                 id: loading_text
-                x: 229
-                y: 206
+                x: 216
+                y: 200
                 text: qsTr("Call Ended...")
-                font.pixelSize: 15
+                font.pixelSize: 20
             }
 
             Image {
@@ -83,9 +83,9 @@ FlowItem {
 
     Text {
         id: text1
-        x: 590
-        y: 426
+        x: 574
+        y: 424
         text: qsTr("Returning to Home")
-        font.pixelSize: 12
+        font.pixelSize: 16
     }
 }

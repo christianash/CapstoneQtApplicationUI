@@ -374,10 +374,10 @@ FlowItem {
 
             Text {
                 id: mute_status_text
-                x: 558
-                y: -8
+                x: 525
+                y: -15
                 text: qsTr("You are currently unmuted")
-                font.pixelSize: 14
+                font.pixelSize: 20
             }
         }
 
@@ -649,7 +649,7 @@ FlowItem {
             x: 42
             y: 8
             text: qsTr("Secure Call in progress...")
-            font.pixelSize: 18
+            font.pixelSize: 20
         }
 
         Rectangle {
@@ -802,6 +802,7 @@ FlowItem {
             PropertyChanges {
                 target: volume_slider_text
                 visible: true
+                font.pixelSize: 18
             }
 
             PropertyChanges {
@@ -858,9 +859,9 @@ FlowItem {
             PropertyChanges {
                 target: participant_frame
                 x: 407
-                y: 344
+                y: 337
                 width: 222
-                height: 221
+                height: 228
                 visible: true
                 color: "#2e2e2e"
                 radius: 5
@@ -869,7 +870,7 @@ FlowItem {
             PropertyChanges {
                 target: participant1_id
                 x: 6
-                y: 29
+                y: 32
                 visible: true
                 color: "#ffffff"
             }
@@ -877,7 +878,7 @@ FlowItem {
             PropertyChanges {
                 target: participant2_id
                 x: 6
-                y: 77
+                y: 79
                 visible: true
                 color: "#ffffff"
             }
@@ -885,7 +886,7 @@ FlowItem {
             PropertyChanges {
                 target: participant3_id
                 x: 6
-                y: 129
+                y: 130
                 visible: true
                 color: "#ffffff"
             }
@@ -900,12 +901,12 @@ FlowItem {
 
             PropertyChanges {
                 target: participants_text
-                x: 8
-                y: 4
+                x: 6
+                y: 1
                 visible: true
                 color: "#ffffff"
                 text: qsTr("Participants:")
-                font.pixelSize: 14
+                font.pixelSize: 18
                 font.bold: true
             }
 
@@ -947,7 +948,7 @@ FlowItem {
             PropertyChanges {
                 target: rectangle
                 x: 100
-                y: 208
+                y: 217
                 width: 23
                 height: 23
                 color: "#2e2e2e"
@@ -964,6 +965,11 @@ FlowItem {
             PropertyChanges {
                 target: custom_Camera_Button
                 checked: false
+            }
+
+            PropertyChanges {
+                target: speaker_icon1
+                visible: false
             }
         },
         State {
@@ -1031,6 +1037,26 @@ FlowItem {
                 target: custom_Camera_Button
                 checked: false
             }
+
+            PropertyChanges {
+                target: speaker_icon
+                visible: false
+            }
+
+            PropertyChanges {
+                target: speaker_icon1
+                visible: false
+            }
+
+            PropertyChanges {
+                target: clear_btn
+                font.pointSize: 14
+            }
+
+            PropertyChanges {
+                target: text1
+                font.pixelSize: 16
+            }
         },
         State {
             name: "CameraCheckedState"
@@ -1075,7 +1101,7 @@ FlowItem {
                 visible: true
                 color: "#ffffff"
                 text: "Camera Preview:"
-                font.pixelSize: 16
+                font.pixelSize: 18
             }
 
             PropertyChanges {
@@ -1146,7 +1172,18 @@ FlowItem {
                 height: 50
                 visible: true
                 text: qsTr("Toggle")
+                font.pointSize: 13
                 checkable: true
+            }
+
+            PropertyChanges {
+                target: speaker_icon2
+                visible: false
+            }
+
+            PropertyChanges {
+                target: speaker_icon3
+                visible: false
             }
         },          State {
             name: "CameraCheckedState1"
@@ -1190,7 +1227,7 @@ FlowItem {
                 visible: true
                 color: "#ffffff"
                 text: "Camera Preview:"
-                font.pixelSize: 16
+                font.pixelSize: 18
             }
 
             PropertyChanges {
@@ -1264,7 +1301,13 @@ FlowItem {
                 height: 50
                 visible: true
                 text: qsTr("Toggle")
+                font.pointSize: 13
                 checkable: true
+            }
+
+            PropertyChanges {
+                target: speaker_icon2
+                visible: false
             }
         }
     ]

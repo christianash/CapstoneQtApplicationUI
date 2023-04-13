@@ -47,10 +47,10 @@ FlowItem {
 
             Text {
                 id: loading_text
-                x: 210
-                y: 208
+                x: 187
+                y: 206
                 text: qsTr("Joining Secure Call...")
-                font.pixelSize: 15
+                font.pixelSize: 20
             }
 
             Image {

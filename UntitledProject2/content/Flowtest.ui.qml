@@ -15,11 +15,11 @@ FlowView {
     flowDecisions: [
         FlowDecision {
             id: secureDecide1
-            targets: [flowTransition7,flowTransition10]
+            targets: [flowTransition10,flowTransition7]
         },
         FlowDecision {
             id: secureDecide2
-            targets: [flowTransition11,flowTransition5]
+            targets: [flowTransition5,flowTransition11]
         },
         FlowDecision {
             id: flowDecision
@@ -62,18 +62,6 @@ FlowView {
             }
             to: loadClearCall
             from: mainDialScreen
-        },
-        FlowTransition {
-            id: flowTransition7
-            question: "Credentials Incorrect"
-            to: videoSecureScreen
-            from: videoSecureScreen
-        },
-        FlowTransition {
-            id: flowTransition11
-            question: "Credentials Incorrect"
-            to: audioSecureScreen
-            from: audioSecureScreen
         },
         FlowTransition {
             id: flowTransition5
@@ -147,12 +135,6 @@ FlowView {
             id: flowTransition21
             question: "Valid Credentials"
             to: mainDialScreen
-            from: loginScreen
-        },
-        FlowTransition {
-            id: flowTransition22
-            question: "Invalid Credentials"
-            to: loginScreen
             from: loginScreen
         },
         FlowTransition {
@@ -230,6 +212,69 @@ FlowView {
             id: flowTransition30
             to: mainLandingScreenGuest
             from: audioSecureScreen
+        },
+        FlowTransition {
+            id: flowTransition31
+            to: mainDialScreen
+            from: wIPScreen2
+        },
+        FlowTransition {
+            id: flowTransition32
+            to: wIPScreen2
+            from: mainDialScreen
+        },
+        FlowTransition {
+            id: flowTransition33
+            to: wIPScreen
+            from: mainLandingScreenGuest
+        },
+        FlowTransition {
+            id: flowTransition34
+            to: mainLandingScreenGuest
+            from: wIPScreen
+        },
+        FlowTransition {
+            id: flowTransition22
+            question: "Invalid Credentials"
+            to: loginErrorScreen
+            from: loginScreen
+        },
+        FlowTransition {
+            id: flowTransition35
+            to: flowDecision1
+            from: loginErrorScreen
+        },
+        FlowTransition {
+            id: flowTransition7
+            question: "Credentials Incorrect"
+            to: securityErrorScreen1
+            from: videoSecureScreen
+        },
+        FlowTransition {
+            id: flowTransition11
+            question: "Credentials Incorrect"
+            to: securityErrorScreen
+            from: audioSecureScreen
+        },
+        FlowTransition {
+            id: flowTransition36
+            to: secureDecide2
+            from: securityErrorScreen
+        },
+        FlowTransition {
+            id: flowTransition37
+            to: secureDecide1
+            from: securityErrorScreen1
+        },
+        FlowTransition {
+            id: flowTransition38
+            to: mainLandingScreenGuest
+            from: securityErrorScreen1
+        },
+        FlowTransition {
+            id: flowTransition39
+            to: mainLandingScreenGuest
+            from: securityErrorScreen
         }
     ]
 
@@ -324,6 +369,14 @@ FlowView {
             width: 105
             height: 102
         }
+
+        FlowActionArea {
+            target: flowTransition32
+            x: 167
+            y: 544
+            width: 325
+            height: 113
+        }
     }
 
     LoadClearCall {
@@ -416,6 +469,14 @@ FlowView {
             width: 105
             height: 103
         }
+
+        FlowActionArea {
+            target: flowTransition33
+            x: 163
+            y: 557
+            width: 102
+            height: 100
+        }
     }
 
     LoginScreen {
@@ -450,18 +511,97 @@ FlowView {
         }
     }
 
+    WIPScreen {
+        id: wIPScreen
+
+        FlowActionArea {
+            target: flowTransition34
+            x: 8
+            y: 8
+            width: 80
+            height: 81
+        }
+    }
+
+    WIPScreen {
+        id: wIPScreen2
+
+        FlowActionArea {
+            target: flowTransition31
+            x: 8
+            y: 8
+            width: 80
+            height: 86
+        }
+    }
+
+    LoginErrorScreen {
+        id: loginErrorScreen
+
+        FlowActionArea {
+            target: flowTransition35
+            x: 841
+            y: 355
+            width: 172
+            height: 56
+        }
+    }
+
+    SecurityErrorScreen {
+        id: securityErrorScreen
+
+        FlowActionArea {
+            target: flowTransition36
+            x: 664
+            y: 377
+            width: 114
+            height: 52
+        }
+
+        FlowActionArea {
+            target: flowTransition39
+            x: 8
+            y: 626
+            width: 165
+            height: 80
+        }
+    }
+
+    SecurityErrorScreen {
+        id: securityErrorScreen1
+
+        FlowActionArea {
+            target: flowTransition37
+            x: 660
+            y: 377
+            width: 123
+            height: 50
+        }
+
+        FlowActionArea {
+            target: flowTransition38
+            x: 8
+            y: 632
+            width: 168
+            height: 80
+        }
+    }
+
 
 }
 
 /*##^##
 Designer {
-    D{i:0}D{i:48;flowX:869.2106461225521;flowY:81.4745228578659}D{i:52;flowX:2648.1801805578843;flowY:1069.3691304712409}
-D{i:55;flowX:2635;flowY:298.2190591983914}D{i:58;flowX:1758.912849552658;flowY:1934.776977179697}
-D{i:61;flowX:1735.7707439828082;flowY:3083.133813692182}D{i:63;flowX:6446.295789678781;flowY:720.530526452521}
-D{i:65;flowX:6337.012110356406;flowY:2153.530526452521}D{i:67;flowX:256.00471284992284;flowY:1427.776730477795}
-D{i:69;flowX:5113.35181134726;flowY:535.9900357731226}D{i:71;flowX:4924.535113210646;flowY:1408}
-D{i:73;flowX:3177.97883752953;flowY:5458.731427770792}D{i:76;flowX:1252.3657138853957;flowY:4258.043427210346}
-D{i:79;flowX:4309.865456750432;flowY:3748.46013673284}D{i:1;flowX:4169.103734202678;flowY:2053.9408703613826}
-D{i:2;flowX:4237.989200010567;flowY:271.0107999894325}
+    D{i:0}D{i:57;flowX:869.2106461225521;flowY:81.4745228578659}D{i:61;flowX:2648.1801805578843;flowY:1069.3691304712409}
+D{i:64;flowX:2635;flowY:298.2190591983914}D{i:67;flowX:1758.912849552658;flowY:1934.776977179697}
+D{i:71;flowX:1735.7707439828082;flowY:3083.133813692182}D{i:73;flowX:7088.9085591578305;flowY:421.7149810816993}
+D{i:75;flowX:7140.635698947289;flowY:1887.9688720726217}D{i:77;flowX:256.00471284992284;flowY:1427.776730477795}
+D{i:79;flowX:5595.181419368373;flowY:269.9688720726216}D{i:81;flowX:5595.620134983599;flowY:1723.9119644137618}
+D{i:83;flowX:3177.97883752953;flowY:5458.731427770792}D{i:87;flowX:1252.3657138853957;flowY:4258.043427210346}
+D{i:90;flowX:4309.865456750432;flowY:3748.46013673284}D{i:92;flowX:3233.655206108565;flowY:6495}
+D{i:94;flowX:272.7219129061657;flowY:5153.945714861837}D{i:96;flowX:89.29470947132154;flowY:3499.010386040523}
+D{i:98;flowX:4278.777236936456;flowY:1030.8808364863833}D{i:101;flowX:5326.949050578944;flowY:2769.520882426563}
+D{i:1;flowX:4169.103734202678;flowY:2053.9408703613826}D{i:2;flowX:4237.989200010567;flowY:271.0107999894325}
+D{i:4;flowX:1500.6715462375314;flowY:3912}D{i:5;flowX:379.99824800558525;flowY:780.8183178196957}
 }
 ##^##*/

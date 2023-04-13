@@ -349,10 +349,10 @@ FlowItem {
 
             Text {
                 id: mute_status_text
-                x: 558
-                y: -8
+                x: 525
+                y: 5
                 text: qsTr("You are currently unmuted")
-                font.pixelSize: 14
+                font.pixelSize: 20
             }
 
             Rectangle {
@@ -661,7 +661,7 @@ FlowItem {
             x: 42
             y: 8
             text: qsTr("Secure Call in progress...")
-            font.pixelSize: 18
+            font.pixelSize: 20
         }
 
         Rectangle {
@@ -855,6 +855,7 @@ FlowItem {
             PropertyChanges {
                 target: volume_slider_text
                 visible: true
+                font.pixelSize: 18
             }
 
             PropertyChanges {
@@ -884,6 +885,11 @@ FlowItem {
                 target: custom_Mute_Button
                 opacity: 0.5
             }
+
+            PropertyChanges {
+                target: mute_status_text
+                font.pixelSize: 18
+            }
         },
         State {
             name: "ParticipantCheckedState"
@@ -892,9 +898,9 @@ FlowItem {
             PropertyChanges {
                 target: participant_frame
                 x: 407
-                y: 222
+                y: 238
                 width: 222
-                height: 343
+                height: 327
                 visible: true
                 color: "#2e2e2e"
                 radius: 5
@@ -935,11 +941,11 @@ FlowItem {
             PropertyChanges {
                 target: participants_text
                 x: 8
-                y: 4
+                y: 3
                 visible: true
                 color: "#ffffff"
                 text: qsTr("Participants:")
-                font.pixelSize: 14
+                font.pixelSize: 18
                 font.bold: true
             }
 
@@ -975,7 +981,7 @@ FlowItem {
             PropertyChanges {
                 target: rectangle
                 x: 100
-                y: 332
+                y: 315
                 width: 23
                 height: 23
                 color: "#2e2e2e"
@@ -1005,6 +1011,16 @@ FlowItem {
                 color: "#ffffff"
                 text: "First and Last Name 5"
                 font.pixelSize: 20
+            }
+
+            PropertyChanges {
+                target: speaker_icon4
+                visible: false
+            }
+
+            PropertyChanges {
+                target: speaker_icon1
+                visible: true
             }
         },
         State {
@@ -1052,6 +1068,31 @@ FlowItem {
                 height: 55
                 font.pixelSize: 24
                 font.bold: true
+            }
+
+            PropertyChanges {
+                target: speaker_icon1
+                visible: false
+            }
+
+            PropertyChanges {
+                target: speaker_icon2
+                visible: false
+            }
+
+            PropertyChanges {
+                target: speaker_icon5
+                visible: false
+            }
+
+            PropertyChanges {
+                target: clear_btn
+                font.pointSize: 14
+            }
+
+            PropertyChanges {
+                target: text1
+                font.pixelSize: 16
             }
         }
     ]
