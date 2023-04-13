@@ -215,6 +215,12 @@ FlowItem {
                         font.bold: true
                         visible: false
                     }
+
+                    Text {
+                        id: text2
+                        text: qsTr("Text")
+                        font.pixelSize: 12
+                    }
                 }
 
                 Button {
@@ -889,6 +895,15 @@ FlowItem {
             PropertyChanges {
                 target: mute_status_text
                 font.pixelSize: 18
+            }
+
+            PropertyChanges {
+                target: text2
+                x: 93
+                y: -85
+                color: "#f8f8f8"
+                text: qsTr("name of connected device")
+                font.pixelSize: 13
             }
         },
         State {

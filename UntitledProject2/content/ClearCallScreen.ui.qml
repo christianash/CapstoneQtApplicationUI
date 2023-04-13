@@ -225,6 +225,12 @@ FlowItem {
                         font.bold: true
                         visible: false
                     }
+
+                    Text {
+                        id: text3
+                        text: qsTr("Text")
+                        font.pixelSize: 12
+                    }
                 }
 
                 Button {
@@ -944,6 +950,17 @@ FlowItem {
             PropertyChanges {
                 target: custom_Mute_Button
                 opacity: 0.5
+            }
+
+            PropertyChanges {
+                target: text3
+                x: 90
+                y: -88
+                width: 156
+                height: 16
+                color: "#ffffff"
+                text: qsTr("name of connected device")
+                font.pixelSize: 13
             }
         },
         State {

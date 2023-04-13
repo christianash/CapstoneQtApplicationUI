@@ -240,6 +240,13 @@ FlowItem {
                         font.bold: true
                         visible: false
                     }
+
+                    Text {
+                        id: text4
+                        visible: false
+                        text: qsTr("Text")
+                        font.pixelSize: 12
+                    }
                 }
 
                 Button {
@@ -641,6 +648,16 @@ FlowItem {
                     fillMode: Image.PreserveAspectFit
                 }
 
+                Text {
+                    id: camera_type_text
+                    x: 0
+                    y: 0
+                    width: 131
+                    height: 75
+                    text: qsTr("Text")
+                    font.pixelSize: 12
+                }
+
             }
         }
 
@@ -850,6 +867,18 @@ FlowItem {
             PropertyChanges {
                 target: custom_Camera_Button
                 checked: false
+            }
+
+            PropertyChanges {
+                target: text4
+                x: 81
+                y: -85
+                width: 165
+                height: 23
+                visible: true
+                color: "#ffffff"
+                text: qsTr("name of connected device")
+                font.pixelSize: 13
             }
         },
         State {
@@ -1185,6 +1214,17 @@ FlowItem {
                 target: speaker_icon3
                 visible: false
             }
+
+            PropertyChanges {
+                target: camera_type_text
+                x: 220
+                y: 34
+                width: 157
+                height: 25
+                color: "#ffffff"
+                text: qsTr("name of connected device")
+                font.pixelSize: 13
+            }
         },          State {
             name: "CameraCheckedState1"
             when: cam_switch.checked && custom_Camera_Button.checked
@@ -1308,6 +1348,17 @@ FlowItem {
             PropertyChanges {
                 target: speaker_icon2
                 visible: false
+            }
+
+            PropertyChanges {
+                target: camera_type_text
+                x: 220
+                y: 34
+                width: 157
+                height: 25
+                color: "#ffffff"
+                text: qsTr("name of connected device")
+                font.pixelSize: 13
             }
         }
     ]
