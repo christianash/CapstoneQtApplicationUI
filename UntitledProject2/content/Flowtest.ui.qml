@@ -103,12 +103,6 @@ FlowView {
             from: loadClearCall
         },
         FlowTransition {
-            id: flowTransition16
-            question: "Connection Failed"
-            to: mainDialScreen
-            from: loadClearCall
-        },
-        FlowTransition {
             id: flowTransition25
             to: clearCallScreen
         },
@@ -275,6 +269,12 @@ FlowView {
             id: flowTransition39
             to: mainLandingScreenGuest
             from: securityErrorScreen
+        },
+        FlowTransition {
+            id: flowTransition16
+            question: "Failed to Connect to Call"
+            to: mainLandingScreenGuest
+            from: loadClearCall
         }
     ]
 
@@ -602,6 +602,7 @@ D{i:90;flowX:4309.865456750432;flowY:3748.46013673284}D{i:92;flowX:3233.65520610
 D{i:94;flowX:272.7219129061657;flowY:5153.945714861837}D{i:96;flowX:89.29470947132154;flowY:3499.010386040523}
 D{i:98;flowX:4278.777236936456;flowY:1030.8808364863833}D{i:101;flowX:5326.949050578944;flowY:2769.520882426563}
 D{i:1;flowX:4169.103734202678;flowY:2053.9408703613826}D{i:2;flowX:4237.989200010567;flowY:271.0107999894325}
-D{i:4;flowX:1500.6715462375314;flowY:3912}D{i:5;flowX:379.99824800558525;flowY:780.8183178196957}
+D{i:3;flowX:3386.1533575687786;flowY:4898.965105109692}D{i:4;flowX:1500.6715462375314;flowY:3912}
+D{i:5;flowX:379.99824800558525;flowY:780.8183178196957}
 }
 ##^##*/
